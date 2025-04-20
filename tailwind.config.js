@@ -10,6 +10,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        actay: ['"Actay Wide"', 'sans-serif'],
+        raleway: ['Raleway', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",

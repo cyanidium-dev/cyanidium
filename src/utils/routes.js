@@ -1,10 +1,12 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaGithub } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaGithub, FaYoutube, FaTicketAlt, FaTiktok } from "react-icons/fa";
 
 // Основные ссылки для хедера, бургера и других общих компонентов
 export const routes = [
-  { name: "Home", path: "/" },
-  { name: "About", path: "/about" },
-  { name: "Contact", path: "/contact" },
+  { name: "Portfolio", path: "/" },
+  { name: "About_us", path: "/about" },
+  { name: "Flow_development", path: "/flow" },
+  { name: "Blog", path: "/blog" },
+  { name: "Contact_us", path: "/contact" },
 ];
 
 // Ссылки, которые используются только в футере
@@ -16,8 +18,8 @@ export const footerLinks = [
 // Соц.сети
 
 export const socialLinks = [
-  { name: "Facebook", url: "https://facebook.com", icon: FaFacebook },
-  { name: "Twitter", url: "https://twitter.com", icon: FaTwitter },
   { name: "Instagram", url: "https://instagram.com", icon: FaInstagram },
-  { name: "GitHub", url: "https://github.com", icon: FaGithub },
+  { name: "Youtube", url: "https://youtube.com", icon: FaYoutube },
+  { name: "Tiktok", url: "https://tiktok.com", icon: FaTiktok },
+  { name: "Facebook", url: "https://facebook.com", icon: FaFacebook },
 ];

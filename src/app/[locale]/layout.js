@@ -1,4 +1,5 @@
-import { Montserrat } from "next/font/google";
+import { Raleway } from "next/font/google";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import { Providers } from "../../../providers";
@@ -14,7 +15,7 @@ export const metadata = {
   },
 };
 
-const montserrat = Montserrat({
+const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -24,12 +25,13 @@ export default async function RootLayout({ children, params }) {
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className={`${montserrat.className}`}>
-      <body>
+    <html lang={locale} className={`${raleway.className}`}>
+      <body >
         <NextIntlClientProvider messages={messages}>
           <Providers>
-            <Header />
-            <main>{children}</main>
+            { /* <Header /> */ }
+            <main className="bg-[#020418]">{children}</main>
+            <Navbar />
             <Footer />
           </Providers>
         </NextIntlClientProvider>
