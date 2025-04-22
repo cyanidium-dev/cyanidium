@@ -26,10 +26,10 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale} className={`${raleway.className}`}>
-      <body >
+      <body>
         <NextIntlClientProvider messages={messages}>
           <Providers>
-            { /* <Header /> */ }
+            {/* <Header />  */}
             <main className="bg-[#020418]">{children}</main>
             <Navbar />
             <Footer />
