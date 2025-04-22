@@ -1,11 +1,23 @@
 {
   "HomeSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Сайт вирішує",
+    "question": "Ви хочете, щоб ваш бізнес \n приносив гроші?",
+    "button": "Обговорити проект",
+    "point_1": "Чистий код",
+    "point_2": "Маркетинговий \n підхід",
+    "point_3": "Довічна \n гарантія"
   },
   "FeatureSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Чому варто \n працювати з \n нами?",
+    "feature_1_name": "Вам не потрібне технічне завдання",
+    "feature_2_name": "Ви не переплачуєте за непотрібних менеджерів",
+    "feature_3_name": "Швидкість і демократичність цін",
+    "feature_1_description": "Ваше завдання розповісти нам про вашу проблему, а ми створимо технічне завдання та знайдемо оптимальні рішення для її вирішення.",
+    "feature_2_description": "Ми невелика команда, націлена на результат. Ви безпосередньо спілкуєтеся з фахівцями, не витрачаючи час на менеджера.",
+    "feature_3_description": "Дотримуючись принципів Ілона Маска, ми змогли пришвидшити наші процеси порівняно з іншими агентствами. По-перше, ми створюємо найнеобхідніші функції сайту.",
+    "point_1": "досвід роботи",
+    "point_2": "успішні проекти",
+    "point_3": "Задоволені клієнти"
   },
   "PortfolioSection": {
     "title": "Payments tool for software companies",
@@ -44,8 +56,7 @@
     "Flow_development": "Процесс розробки",
     "Blog": "Блог",
     "Contact_us": "Зв'язатися з нами",
-    "Contact_1": "Зверніться до нас - давайте зробимо ваш сайт",
-    "Contact_2": "потужним та унікальним!",
+    "Contact": "Зверніться до нас - давайте зробимо ваш сайт \n потужним та унікальним!",
     "Phone": "Номер телефону",
     "Send": "Надіслати"
   }

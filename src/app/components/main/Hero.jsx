@@ -15,15 +15,20 @@ export default function Hero() {
           <div className="flex justify-between">
             {/* Левая часть */}
             <div>
-              <h1 className="text-[#EAEBFF] font-bold text-[64px] uppercase mb-4 font-Actay_Wide">
-                THE SITE DECIDES
+              <h1 className="text-[#EAEBFF] font-bold text-[64px] uppercase mb-4 font-actay">
+                {t("title")}
               </h1>
               <p className="text-[#EAEBFF] text-[20px] mb-[38px] font-raleway">
-                Do you want your business to <br /> make money?
+                {t("question").split("\n").map((line, i) => (
+                  <span key={i}>
+                    {line}
+                    <br />
+                  </span>
+                ))}
               </p>
               <button className="w-[245px] h-[48px] rounded-full border border-[#7192FF] bg-[#EAEBFF]">
                 <div className="text-[#020418] text-[14px] font-bold uppercase font-raleway">
-                  DISCUSS PROJECT
+                  {t("button")}
                 </div>
               </button>
             </div>
@@ -33,7 +38,7 @@ export default function Hero() {
               <div className="pr-[18px]">
                 <StarIcon width={48} height={48}/>
               </div>
-              <div className="text-right text-[#EAEBFF] pr-[50px] uppercase font-['Actay_Wide'] text-[20.573px] leading-[103.301%]">
+              <div className="text-right text-[#EAEBFF] pr-[50px] uppercase font-actay text-[20.573px] leading-[103.301%]">
                 <div className="pb-[5px]">CYANIDIUM.</div>
                 <div>DEV</div>
               </div>
@@ -46,7 +51,7 @@ export default function Hero() {
           {/* Средняя секция */}
           <div className="flex justify-end">
             <div className="flex flex-col justify-center items-start gap-[40px]">
-              {["Clean code", "Marketing\napproach", "Lifetime\nwarranty"].map((text, idx) => (
+              {[t("point_1"), t("point_2"), t("point_3")].map((text, idx) => (
                 <p
                   key={idx}
                   className="text-[24px] font-extralight uppercase bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] bg-clip-text text-transparent font-raleway"

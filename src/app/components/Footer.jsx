@@ -11,7 +11,12 @@ export default function Footer() {
           <div className="flex flex-col items-start self-stretch">
             <h2 className="text-[32px] font-normal leading-[103.301%] uppercase text-white font-actay pb-[16px]">Cyanidium.dev</h2>
             <span className="text-white/80 pb-[36px] leading-relaxed">
-              {t("Contact_1")} <br /> {t("Contact_2")}
+              {t("Contact").split("\n").map((line, i) => (
+                <span key={i}>
+                  {line}
+                  <br />
+                </span>
+              ))}
             </span>
             {/* Градиент не работает */}
             <div className="flex w-[325px] h-[40px] rounded-[4px] border border-[radial-gradient(circle,_#EBF0FF,_#4D62CA,_#1A1033)] bg-transparent">
@@ -53,10 +58,21 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch flex justify-center">
-        <p className="font-actay m-0 p-0 self-stretch font-[700] text-[150.397px] leading-[103.301%] uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent">
-          Cyanidium.dev
-        </p>
+      <div className="self-stretch flex justify-center animate-marquee">
+        <div className="animate-marquee flex w-max">
+          {[...Array(2)].map((_, idx) => (
+            <div key={idx} className="flex">
+              {Array(10).fill("Cyanidium.dev").map((text, i) => (
+                <span
+                  key={`${idx}-${i}`}
+                  className="font-actay text-[150px] font-bold uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent mr-[100px]"
+                >
+                  {text}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </footer>
   );

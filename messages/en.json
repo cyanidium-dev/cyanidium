@@ -1,11 +1,23 @@
 {
   "HomeSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "THE SITE DECIDES",
+    "question": "Do you want your business to \n make money?",
+    "button": "Discuss project",
+    "point_1": "Clean code",
+    "point_2": "Marketing \n approach",
+    "point_3": "Lifetime \n warranty"
   },
   "FeatureSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Why should you \n Work with us?",
+    "feature_1_name": "You don't need a technical specification",
+    "feature_2_name": "You don't overpay for unnecessary managers",
+    "feature_3_name": "Speed ​​and price democracy",
+    "feature_1_description": "Your task is to tell us about your problem, and we will create a technical specification and find the best solutions to solve it.",
+    "feature_2_description": "We are a small team focused on results. You communicate directly with specialists without wasting time on a manager.",
+    "feature_3_description": "By following Elon Musk's principles, we were able to speed up our processes compared to other agencies. First, we create the most necessary website features.",
+    "point_1": "Average years of experiense",
+    "point_2": "successful projects",
+    "point_3": "Satisfied customers"
   },
   "PortfolioSection": {
     "title": "Payments tool for software companies",
@@ -44,8 +56,7 @@
     "Flow_development": "Flow development",
     "Blog": "Blog",
     "Contact_us": "Contact us",
-    "Contact_1": "Contact us – let’s make your website",
-    "Contact_2": "powerful and unique!",
+    "Contact": "Contact us – let’s make your website \n powerful and unique!",
     "Phone": "Phone number",
     "Send": "Send"
   }
