@@ -58,7 +58,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="self-stretch flex justify-center animate-marquee">
+      <div className="w-full overflow-hidden">
         <div className="animate-marquee flex w-max">
           {[...Array(2)].map((_, idx) => (
             <div key={idx} className="flex">
