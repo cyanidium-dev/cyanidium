@@ -25,7 +25,7 @@ export default function Footer() {
                 placeholder={t("Phone")}
                 className="px-[16px] py-2 w-full text-[#6B6E9A] font-raleway text-[12px] font-normal leading-[20px] bg-transparent" 
               />
-              <button className="flex w-[92px] h-[38px] px-[42px] py-[10px] justify-center items-center gap-[10px] shrink-0 rounded-[4px] bg-[linear-gradient(111deg,_#EAEBFF_37.36%,_#6A8FFF_182.03%)]">
+              <button className="flex w-[92px] h-full px-[42px] py-[10px] justify-center items-center gap-[10px] shrink-0 rounded-[2px] bg-[linear-gradient(111deg,_#EAEBFF_37.36%,_#6A8FFF_182.03%)]">
                 {t("Send")}
               </button>
             </div>
