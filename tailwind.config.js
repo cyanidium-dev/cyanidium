@@ -17,6 +17,7 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        black: "#000000",
       },
       keyframes: {
         marquee: {
@@ -31,6 +32,8 @@ module.exports = {
   },
   darkMode: "class",
   plugins: [
-    heroui(),
+    heroui({
+      addCommonColors: true,
+    }),
   ],
 };

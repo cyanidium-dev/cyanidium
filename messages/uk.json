@@ -20,12 +20,35 @@
     "point_3": "Задоволені клієнти"
   },
   "PortfolioSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Наше портфоліо",
+    "button": "Переглянути більше",
+    "section_1": "Мистецтво",
+    "section_2": "Харчування",
+    "section_3": "Дорога",
+    "section_4": "Автомобілі",
+    "section_5": "Курс",
+    "section_6": "Тварини",
+    "section_7": "Бухгалтерський облік",
+    "section_8": "Турагентство",
+    "section_9": "Нерухомість",
+    "section_10": "Лід",
+    "section_11": "Маркетинг",
+    "site_1": {
+      "name": "Лендинг",
+      "description": "Продаж авто, франшиза, курсовий продаж, продаж дорожніх знаків, бухгалтерія"
+    },
+    "site_2": {
+      "name": "Сайт з 2+ сторінками",
+      "description": "Художні матеріали, доставка їжі, продаж сухого льоду, продаж їжі, туристичне агентство"
+    },
+    "site_3": {
+      "name": "Маркетплейс",
+      "description": "Продаж авто, туристичне агентство"
+    }
   },
   "SalePointSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Ваш сайт - це не \n просто код, а магніт \n для клієнтів і прибутку!",
+    "message": "Ми завжди будемо з вами на зв'язку і допоможемо \n з будь-якими питаннями чи проблемами!"
   },
   "PriceSection": {
     "title": "Payments tool for software companies",

@@ -51,8 +51,12 @@ export default function Features() {
                   className="w-full object-cover"
                 />
                 <div className="pl-7 pr-7 pt-8">
-                  <h2 className="pb-4 text-[#EAEBFF] font-actay text-[16px] font-bold uppercase">{feature.name}</h2>
-                  <span className="text-[#EAEBFF] font-raleway text-[14px] font-light">{feature.description}</span>
+                  <h2 className="pb-4 text-[#EAEBFF] font-actay text-[16px] font-bold uppercase">
+                    {feature.name}
+                    </h2>
+                  <span className="text-[#EAEBFF] font-raleway text-[14px] font-light">
+                    {feature.description}
+                  </span>
                 </div>
                 <div>
 
