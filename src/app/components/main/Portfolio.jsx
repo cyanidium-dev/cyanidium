@@ -64,7 +64,7 @@ export default function Portfolio() {
 
     return (
       <Container>
-        <div className="min-h-screen flex flex-col justify-center items-center gap-10 pl-[110px] pr-[110px]">
+        <div className="min-h-[1000px] flex flex-col justify-center items-center gap-10 pl-[110px] pr-[110px]">
           <div className="flex items-center justify-between w-full">
             <h1 className="text-[#EAEBFF] text-center font-actay text-[64px] font-bold uppercase">
               {t("title")}
