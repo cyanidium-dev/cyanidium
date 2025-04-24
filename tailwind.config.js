@@ -18,6 +18,7 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         black: "#000000",
+        white: "#ffffff",
       },
       keyframes: {
         marquee: {

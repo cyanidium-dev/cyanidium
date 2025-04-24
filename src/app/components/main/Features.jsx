@@ -7,22 +7,22 @@ export default function Features() {
   const features = [
     {
       img: "/image/feature1.png",
-      name: t("feature_1_name"),
-      description: t("feature_1_description"),
+      name: t("feature_1.name"),
+      description: t("feature_1.description"),
       number: "3.5",
       point: t("point_1"),
     },
     {
       img: "/image/feature2.png",
-      name: t("feature_2_name"),
-      description: t("feature_2_description"),
+      name: t("feature_2.name"),
+      description: t("feature_2.description"),
       number: "200+",
       point: t("point_2"),
     },
     {
       img: "/image/feature3.png",
-      name: t("feature_3_name"),
-      description: t("feature_3_description"),
+      name: t("feature_3.name"),
+      description: t("feature_3.description"),
       number: "99%",
       point: t("point_3"),
     },
@@ -30,7 +30,7 @@ export default function Features() {
 
   return (
     <Container>
-      <div className="min-h-screen">
+      <div className="min-h-[1000px]">
         <h1 className="pb-[90px] text-center font-actay text-[64px] font-bold uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent">
           {t("title").split("\n").map((line, i) => (
             <span key={i}>
@@ -42,7 +42,7 @@ export default function Features() {
         <div className="flex justify-center gap-5">
           {features.map((feature) => (
             <div key={feature.name} className="flex flex-col gap-5">
-              <div className="overflow-hidden flex flex-col justify-start w-[333px] h-[480px] rounded-[8px] border-[1.5px] border-[#EEF3FF]">
+              <div className="relative overflow-hidden flex flex-col justify-start w-[333px] h-[480px] rounded-[8px] border-[1.5px] border-[#EEF3FF]">
                 <Image
                   src={feature.img}
                   alt={feature.name}
@@ -58,9 +58,7 @@ export default function Features() {
                     {feature.description}
                   </span>
                 </div>
-                <div>
-
-                </div>
+                <div className="absolute -right-[35%] -bottom-[25%] w-[300px] h-[200px] bg-[#D4DFFF] opacity-20 blur-3xl rounded-full z-0"></div>
               </div>
               <div className="w-[333px] h-[160px] bg-[url('/image/featurebg.png')] bg-no-repeat bg-cover bg-center rounded-lg">
                 <div className="flex flex-col pl-7 pt-4">
