@@ -51,16 +51,62 @@
     "message": "We will always be in touch with you and \n help with any questions or problems!"
   },
   "PriceSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Types of website",
+    "description": "Price is calculated individually...",
+    "type_1": {
+      "name": "Lead Generation",
+      "description": "Application, servfices, information sites"
+    },
+    "type_2": {
+      "name": "Site Sales",
+      "description": "E-commerce with payment systems"
+    }
   },
   "TeamSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Our team",
+    "description": "We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.",
+    "developer_1": {
+      "running_ling": "Developer",
+      "name": "Fedir Alpatov",
+      "position": "Full-Stack Developer",
+      "description": "Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales."
+    },
+    "developer_2": {
+      "running_ling": "Designer",
+      "name": "Diana Merkotun",
+      "position": "UI/UX Designer",
+      "description": "Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales."
+    }
   },
   "ReviewsSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Відгуки - що про нас \n говорять наші клієнти",
+    "card_1": {
+      "name": "Володимир",
+      "position": "Засновник Татарка",
+      "task_header": "Наше завдання",
+      "task": "Розробіть ринок доставки їжі та цільову сторінку для франшизи",
+      "description": "Професійна команда, яка дійсно знає своє ремесло! Ми замовили корпоративний сайт, і результат перевершив наші очікування. Дизайн стильний, все працює гладко, а головне - зручний для наших клієнтів."
+    },
+    "card_2": {
+      "name": "Віктор",
+      "position": "Засновник Нерухомість",
+      "task_header": "Наше завдання",
+      "task": "Розробіть ринок доставки їжі та цільову сторінку для франшизи"
+    },
+    "card_3": {
+      "name": "Іванна",
+      "position": "Засновник Л.Ф.",
+      "task_header": "Наше завдання",
+      "task": "Розробіть ринок доставки їжі та цільову сторінку для франшизи",
+      "description": "Професійна команда, яка дійсно знає своє ремесло! Ми замовили корпоративний сайт, і результат перевершив наші очікування. Дизайн стильний, все працює гладко, а головне - зручний для наших клієнтів."
+    },
+    "card_4": {
+      "name": "Володимир",
+      "position": "Засновник Татарка",
+      "task_header": "Наше завдання",
+      "task": "Розробіть ринок доставки їжі та цільову сторінку для франшизи",
+      "description": "Професійна команда, яка дійсно знає своє ремесло! Ми замовили корпоративний сайт, і результат перевершив наші очікування. Дизайн стильний, все працює гладко, а головне - зручний для наших клієнтів."
+    }
   },
   "ContactSection": {
     "title": "Payments tool for software companies",

@@ -26,7 +26,7 @@ export default function Team() {
     
     return (
       <Container>
-        <div className="px-[120px]">
+        <div className="px-[120px] min-h-[1000px]">
           <header className="mb-[53px] inline-flex gap-[111px] align-start">
             <h2 className="inline-block text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">Our team</h2>
             <p className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[18px]">We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.</p>

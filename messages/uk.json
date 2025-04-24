@@ -51,16 +51,62 @@
     "message": "Ми завжди будемо з вами на зв'язку і допоможемо \n з будь-якими питаннями чи проблемами!"
   },
   "PriceSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Типи сайтів",
+    "description": "Ціна розраховується індивідуально...",
+    "type_1": {
+      "name": "Генерація клієнтів",
+      "description": "Додатки, сервіси.\n Інформаційні сайти"
+    },
+    "type_2": {
+      "name": "Продажі на сайті",
+      "description": "Електронна комерція з платіжними системами"
+    }
   },
   "TeamSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Наша команда",
+    "description": "Ми — команда творчих розробників, дизайнерів і маркетологів, які об’єдналися, щоб створити ефективні, стильні та технологічно передові веб-рішення.",
+    "developer_1": {
+      "running_ling": "Розробник",
+      "name": "Федір Алпатов",
+      "position": "Fullstack розробник",
+      "description": "Створення сайту для продажу курсів - складний процес, який включає в себе кілька основних етапів. Кожен з них спрямований на забезпечення зручності користувача та ефективних продажів."
+    },
+    "developer_2": {
+      "running_ling": "Дизайнер",
+      "name": "Діана Меркотун",
+      "position": "UI/UX дизайнер",
+      "description": "Створення сайту для продажу курсів - складний процес, який включає в себе кілька основних етапів. Кожен з них спрямований на забезпечення зручності користувача та ефективних продажів."
+    }
   },
   "ReviewsSection": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+    "title": "Reviews - what our \n clients say about us",
+    "card_1": {
+      "name": "Volodymyr",
+      "position": "Founder Tatarka",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
+    },
+    "card_2": {
+      "name": "Viktor",
+      "position": "Founder Real Estate",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise"
+    },
+    "card_3": {
+      "name": "Ivanna",
+      "position": "Founder LF",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
+    },
+    "card_4": {
+      "name": "Volodymyr",
+      "position": "Founder Tatarka",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
+    }
   },
   "ContactSection": {
     "title": "Payments tool for software companies",

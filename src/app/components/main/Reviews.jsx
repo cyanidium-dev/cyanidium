@@ -8,12 +8,12 @@ export default function Reviews() {
     const t = useTranslations("ReviewsSection");
     return (
       <Container>
-        <div className="px-[120px]">
-          <header>
+        <div className="px-[120px] min-h-[1000px]">
+          <header className="mb-[47px]">
             <h2 className="inline-block text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-center">REVIEWS - WHAT OUR CLIENTS SAY ABOUT US</h2>
           </header>
           <div className="flex gap-5">
-            <div className="max-w-[333px] flex flex-col border-[1px] rounded-lg">
+            <div className="max-w-[333px] flex flex-col border-[1px] rounded-lg bg-[linear-gradient(164deg,_#020418_52.91%,_#0A157E_204.34%)]">
               <header className="flex gap-8 items-center p-[32px]">
                 <img className="w-[74px] h-[74px] rounded-[50%]" src="/image/ava-1.jpg" alt="Avatar"/>
                 <div>
@@ -26,7 +26,7 @@ export default function Reviews() {
                 <p className="text-[14px] text-[#020418]">Develop a food delivery marketplace and landing page for a franchise</p>
                 <img src="/icons/star.png" className="absolute top-3 right-3" alt="Star icon" />
               </div>
-              <div className="px-[32px] py-[48px] text-[14px] text-[#EAEBFF] font-light">
+              <div className="px-[32px] py-[48px] text-[14px] text-[#EAEBFF] font-light break-words whitespace-normal">
                 “A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients.”
               </div>
             </div>
