@@ -12,12 +12,14 @@ export default function Team() {
         name: 'FEDIR ALPATOV',
         position: 'Full-Stack Developer',
         description: 'Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales.',
+        infiniteLoop: 'DEVELOPER',
         img: '/image/team-member-1.jpg', 
       },
       {
         name: 'DIANA MERKOTUN',
         position: 'UI/UX Designer',
         description: 'Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales.',
+        infiniteLoop: 'DESIGNER',
         img: '/image/team-member-2.jpg',
       },
     ]
@@ -31,8 +33,8 @@ export default function Team() {
           </header>
           <div className="grid grid-cols-2 gap-5">
             {teamMembers.map((member, index) => <article key={index} className="h-[600px] relative p-7 flex flex-col justify-end bg-gray-700 border-[1px] rounded-lg" style={{ backgroundImage: `url(${member.img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
-              <div className="absolute top-5 left-0 h-[70px] w-full bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF]">
-                <p className="inline-block text-2xl text-transparent bg-clip-text bg-gradient-to-r from-[#080218] to-[#2462FF] font-bold">DEVELOPER</p>
+              <div className="absolute top-5 left-0 h-[70px] w-full flex items-center bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF]">
+                <p className="inline-block text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#080218] to-[#2462FF] font-bold">{member.infiniteLoop}</p>
               </div>
               <h3 className="mb-2 inline-block text-xl text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] font-bold">
                 {member.name}
