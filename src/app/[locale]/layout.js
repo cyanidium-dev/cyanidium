@@ -31,8 +31,8 @@ export default async function RootLayout({ children, params }) {
           <Providers>
             {/* <Header />  */}
             <main className="bg-[#020418]">{children}</main>
-            <Navbar />
-            <Footer />
+            {/* <Navbar /> */}
+            {/* <Footer /> */}
           </Providers>
         </NextIntlClientProvider>
       </body>
