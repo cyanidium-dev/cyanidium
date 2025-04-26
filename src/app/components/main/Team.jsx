@@ -4,6 +4,7 @@ import Container from "@/utils/Container";
 import { GoArrowUpRight  } from "react-icons/go";
 
 import { useTranslations } from "next-intl";
+import Image from "next/image"; 
 
 export default function Team() {
     const t = useTranslations("TeamSection");
@@ -25,52 +26,64 @@ export default function Team() {
     ]
     
     return (
-      <Container>
-        <div className="px-[120px] min-h-[1000px]">
-          <header className="mb-[53px] inline-flex gap-[111px] align-start">
-            <h2 className="inline-block text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">Our team</h2>
-            <p className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[18px]">We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.</p>
-          </header>
-          <div className="grid grid-cols-2 gap-5">
-            {teamMembers.map((member, index) => <article key={index} className="h-[600px] relative p-7 flex flex-col justify-end bg-gray-700 border-[1px] rounded-lg" style={{ backgroundImage: `url(${member.img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
-              <div className="absolute top-5 left-0 h-[70px] w-full flex items-center bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF]">
-                <p className="inline-block text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#080218] to-[#2462FF] font-bold">{member.infiniteLoop}</p>
-              </div>
-              <h3 className="mb-2 inline-block text-xl text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] font-bold">
-                {member.name}
-              </h3>
-              <h4 className="mb-5 text-base text-[#EAEBFF] font-semibold">{member.position}</h4>
-              <div className="flex items-end gap-[27px]">
-                <p className="text-[14px] text-[#EAEBFF] font-light">
-                  {member.description}
-                </p>
-                <div className="rounded-[6px] border-[1px]">
-                  <svg
-                    width="60"
-                    height="60"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <linearGradient id="iconGradient" x1="0" y1="0" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#D1D7FF" />
-                        <stop offset="100%" stopColor="#141E4A" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M7 17L17 7M17 7H9M17 7V15"
-                      stroke="url(#iconGradient)"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
-              </div>
-            </article>)}
-          </div>
+      <div className="relative overflow-hidden">
+        <div className="absolute top-[10%] -rotate-12 left-1/2 transform -translate-x-1/2 w-[70%] h-[800px] bg-[#0F41FD] opacity-30 blur-3xl rounded-full z-10"></div>
+        <div className="absolute top-[10%] -rotate-12 left-1/2 transform -translate-x-1/2 w-[50%] h-[800px] bg-[#020418] opacity-90 blur-3xl rounded-full z-10"></div>
+        <div className="absolute left-1/2 transform -translate-x-1/2 rotate-12 h-[70%] w-[120%] z-0">
+          <Image
+            src="/image/herobg.png"
+            alt="Phone"
+            fill
+            className=""
+          />
         </div>
-      </Container>
+        <Container>
+          <div className="relative z-10 px-[120px] min-h-[1250px]">
+            <header className="mb-[53px] inline-flex gap-[111px] align-start">
+              <h2 className="inline-block text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">Our team</h2>
+              <p className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[18px]">We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.</p>
+            </header>
+            <div className="grid grid-cols-2 gap-5">
+              {teamMembers.map((member, index) => <article key={index} className="h-[600px] relative p-7 flex flex-col justify-end bg-gray-700 border-[1px] rounded-lg" style={{ backgroundImage: `url(${member.img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
+                <div className="absolute top-5 left-0 h-[70px] w-full flex items-center bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF]">
+                  <p className="inline-block text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#080218] to-[#2462FF] font-bold">{member.infiniteLoop}</p>
+                </div>
+                <h3 className="mb-2 inline-block text-xl text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] font-bold">
+                  {member.name}
+                </h3>
+                <h4 className="mb-5 text-base text-[#EAEBFF] font-semibold">{member.position}</h4>
+                <div className="flex items-end gap-[27px]">
+                  <p className="text-[14px] text-[#EAEBFF] font-light">
+                    {member.description}
+                  </p>
+                  <div className="rounded-[6px] border-[1px]">
+                    <svg
+                      width="60"
+                      height="60"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <defs>
+                        <linearGradient id="iconGradient" x1="0" y1="0" x2="100%" y2="100%">
+                          <stop offset="0%" stopColor="#D1D7FF" />
+                          <stop offset="100%" stopColor="#141E4A" />
+                        </linearGradient>
+                      </defs>
+                      <path
+                        d="M7 17L17 7M17 7H9M17 7V15"
+                        stroke="url(#iconGradient)"
+                        strokeWidth="1"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </div>
+                </div>
+              </article>)}
+            </div>
+          </div>
+        </Container>
+      </div>
     );
   }
