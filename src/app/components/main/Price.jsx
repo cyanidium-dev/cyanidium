@@ -14,7 +14,8 @@ export default function Price() {
         price: '~$380',
         img: '/image/web-type-1.png',
         textColor: '#EAEBFF',
-        gradient: 'from-[#D4DBFF] to-[#1E43A9]'
+        gradient: 'from-[#D4DBFF] to-[#1E43A9]',
+        shadow: '#0d1943'
       },
       {
         name: t("type_2.name"),
@@ -23,7 +24,8 @@ export default function Price() {
         img: '/image/web-type-2.png',
         bgImg: '/image/site-type-back.png',
         textColor: '#020418',
-        gradient: 'from-[#619AEA] to-[#163D67]'
+        gradient: 'from-[#619AEA] to-[#163D67]',
+        shadow: '#92a6e5'
       },
     ]
     return (
@@ -34,35 +36,44 @@ export default function Price() {
             <p className="text-[32px] text-[#8AA2FF] uppercase">{t("description")}</p>
           </header>
           <div className="flex gap-5">
-            {/* <div className="h-[500px] relative pl-[60px] pt-[58px] flex-[1] border-[1px] rounded-lg text-left">
-              <h3 className='mb-[12px] font-actay text-[36px] text-[#EAEBFF]'>LEAD GENERATION</h3>
-              <p className="mb-[30px] text-[20px] text-[#EAEBFF]">Application, services, information sites</p>
-              <strong className="inline-block text-[52px] text-transparent bg-clip-text bg-gradient-to-b from-[#D4DBFF] to-[#1E43A9]  font-actay">~$380</strong>
-              <img src="/image/web-type-1.png" className="absolute bottom-0 right-0" alt="Web image"/>
+          {websiteTypes.map((website, index) => (
+            <div key={index} className="h-[500px] p-[1px] flex-1 bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)] rounded-lg overflow-hidden">
+              <div className="relative h-full rounded-[7px] overflow-hidden pl-[60px] pt-[58px]" style={
+                website.bgImg
+                  ? {
+                      backgroundImage: "url(/image/site-type-back.png)",
+                      backgroundSize: "cover",
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "center",
+                    }
+                  : {
+                      backgroundColor: "#020418",
+                    }
+              }>
+                {/* Тень СНАЧАЛА */}
+                <div
+                  className="absolute left-[40%] bottom-[-5%] w-[370px] h-[270px] blur-3xl rounded-full opacity-100"
+                  style={{ backgroundColor: website.shadow, zIndex: 1 }}
+                ></div>
+
+                {/* Контент */}
+                <div className="relative z-10">
+                  <h3 className="mb-[12px] font-actay text-[36px]" style={{ color: website.textColor }}>
+                    {website.name}
+                  </h3>
+                  <p className="mb-[30px] text-[20px]" style={{ color: website.textColor }}>
+                    {website.description}
+                  </p>
+                  <strong className={`inline-block text-[52px] text-transparent bg-clip-text bg-gradient-to-b ${website.gradient} font-actay`}>
+                    {website.price}
+                  </strong>
+                </div>
+
+                {/* Картинка */}
+                <img src={website.img} className="absolute bottom-0 right-0 z-20" alt="Web image" />
+              </div>
             </div>
-            <div className="flex-[1] relative pl-[60px] pt-[58px] border-[1px] rounded-lg text-left" style={{backgroundImage: 'url(/image/site-type-back.png)', backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
-              <h3 className='mb-[12px] font-actay text-[36px] text-[#020418]'>SITE SALES</h3>
-              <p className="mb-[30px] text-[20px] text-[#020418]">E-commerce with payment systems</p>
-              <strong className="inline-block text-[52px] text-transparent bg-clip-text bg-gradient-to-b from-[#619AEA] to-[#163D67]  font-actay">~$1500</strong>
-              <img src="/image/web-type-2.png" className="absolute bottom-0 right-0" alt="Web image" />
-            </div> */}
-            {websiteTypes.map((website, index) => <div key={index} className={`h-[500px] relative pl-[60px] pt-[58px] flex-[1] border-[1px] rounded-lg text-left`} style={
-              website.bgImg
-                ? {
-                    backgroundImage: "url(/image/site-type-back.png)",
-                    backgroundSize: "cover",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
-                  }
-                : {
-                    backgroundColor: "#020418",
-                  }
-            }>
-              <h3 className={`mb-[12px] font-actay text-[36px] text-[${website.textColor}]`}>{website.name}</h3>
-                <p className={`mb-[30px] text-[20px] text-[${website.textColor}]`}>{website.description}</p>
-                <strong className={`inline-block text-[52px] text-transparent bg-clip-text bg-gradient-to-b ${website.gradient} font-actay`}>{website.price}</strong>
-                <img src={website.img} className="absolute bottom-0 right-0" alt="Web image" />
-            </div>)}
+          ))}
           </div>
         </div>
       </Container>

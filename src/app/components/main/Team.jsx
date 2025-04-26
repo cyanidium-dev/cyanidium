@@ -1,25 +1,27 @@
 "use client";
 
+import { useState } from "react";
 import Container from "@/utils/Container";
-import { GoArrowUpRight  } from "react-icons/go";
+import { BsArrowUpRightSquare  } from "react-icons/bs";
 
 import { useTranslations } from "next-intl";
 
 export default function Team() {
+    const [hoveredIndex, setHoveredIndex] = useState(null);
     const t = useTranslations("TeamSection");
     const teamMembers = [
       {
-        name: 'FEDIR ALPATOV',
-        position: 'Full-Stack Developer',
-        description: 'Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales.',
-        infiniteLoop: 'DEVELOPER',
+        name: t("developer_1.name"),
+        position: t("developer_1.position"),
+        description: t("developer_1.description"),
+        infiniteLoop: t("developer_1.infinite_loop"),
         img: '/image/team-member-1.jpg', 
       },
       {
-        name: 'DIANA MERKOTUN',
-        position: 'UI/UX Designer',
-        description: 'Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales.',
-        infiniteLoop: 'DESIGNER',
+        name: t("developer_2.name"),
+        position: t("developer_2.position"),
+        description: t("developer_2.description"),
+        infiniteLoop: t("developer_2.infinite_loop"),
         img: '/image/team-member-2.jpg',
       },
     ]
@@ -32,43 +34,60 @@ export default function Team() {
             <p className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[18px]">We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.</p>
           </header>
           <div className="grid grid-cols-2 gap-5">
-            {teamMembers.map((member, index) => <article key={index} className="h-[600px] relative p-7 flex flex-col justify-end bg-gray-700 border-[1px] rounded-lg" style={{ backgroundImage: `url(${member.img})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center'}}>
-              <div className="absolute top-5 left-0 h-[70px] w-full flex items-center bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF]">
-                <p className="inline-block text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#080218] to-[#2462FF] font-bold">{member.infiniteLoop}</p>
-              </div>
-              <h3 className="mb-2 inline-block text-xl text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] font-bold">
-                {member.name}
-              </h3>
-              <h4 className="mb-5 text-base text-[#EAEBFF] font-semibold">{member.position}</h4>
-              <div className="flex items-end gap-[27px]">
-                <p className="text-[14px] text-[#EAEBFF] font-light">
-                  {member.description}
-                </p>
-                <div className="rounded-[6px] border-[1px]">
-                  <svg
-                    width="60"
-                    height="60"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <linearGradient id="iconGradient" x1="0" y1="0" x2="100%" y2="100%">
-                        <stop offset="0%" stopColor="#D1D7FF" />
-                        <stop offset="100%" stopColor="#141E4A" />
-                      </linearGradient>
-                    </defs>
-                    <path
-                      d="M7 17L17 7M17 7H9M17 7V15"
-                      stroke="url(#iconGradient)"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
+          {teamMembers.map((member, index) => (
+            <article
+              key={index}
+              onMouseEnter={() => setHoveredIndex(index)}
+              onMouseLeave={() => setHoveredIndex(null)}
+              className={`h-[600px] relative p-[1px] rounded-lg transition-all duration-300 bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] ${
+                hoveredIndex === null
+                  ? "bg-gray-700"
+                  : hoveredIndex === index
+                  ? "brightness-100 shadow-[0_0_10px_rgba(255,255,255,0.2)]"
+                  : "brightness-50"
+              } cursor-pointer`}
+            >
+                             <div className="absolute top-5 left-0 h-[70px] w-full flex items-center bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] overflow-hidden z-50">
+                  <div className="animate-marquee flex w-max">
+                    {[...Array(2)].map((_, idx) => (
+                      <div key={idx} className="flex">
+                        {Array(10)
+                          .fill(member.infiniteLoop)
+                          .map((text, i) => (
+                            <span
+                              key={`${idx}-${i}`}
+                              className="inline-block text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#080218] to-[#2462FF] font-bold mr-4 uppercase"
+                            >
+                              {text}
+                            </span>
+                          ))}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              <div className={`h-full w-full relative flex flex-col justify-end overflow-hidden rounded-[7px] p-7`}               
+              style={{
+                backgroundImage: `url(${member.img})`,
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center",
+              }}>
+                <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-b from-transparent to-[#03051A] rounded-[7md]"></div>
+                <div className="z-20">
+                  <h3 className="mb-2 inline-block text-xl font-actay text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] font-bold uppercase">
+                    {member.name}
+                  </h3>
+                  <h4 className="mb-5 text-base text-[#EAEBFF] font-semibold">{member.position}</h4>
+                  <div className="flex items-center gap-[27px]">
+                    <p className="text-[14px] text-[#EAEBFF] font-light">
+                      {member.description}
+                    </p>
+                    <img src="/icons/link-arrow.png" alt="Link icon" />
+                  </div>
                 </div>
               </div>
-            </article>)}
+            </article>
+          ))}
           </div>
         </div>
       </Container>

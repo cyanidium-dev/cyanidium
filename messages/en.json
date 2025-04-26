@@ -72,46 +72,46 @@
     "title": "Our team",
     "description": "We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.",
     "developer_1": {
-      "running_ling": "Developer",
+      "infinite_loop": "Developer",
       "name": "Fedir Alpatov",
       "position": "Full-Stack Developer",
       "description": "Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales."
     },
     "developer_2": {
-      "running_ling": "Designer",
+      "infinite_loop": "Designer",
       "name": "Diana Merkotun",
       "position": "UI/UX Designer",
       "description": "Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales."
     }
   },
   "ReviewsSection": {
-    "title": "Відгуки - що про нас \n говорять наші клієнти",
+    "title": "Reviews - what our \n clients say about us",
     "card_1": {
-      "name": "Володимир",
-      "position": "Засновник Татарка",
-      "task_header": "Наше завдання",
-      "task": "Розробіть ринок доставки їжі та цільову сторінку для франшизи",
-      "description": "Професійна команда, яка дійсно знає своє ремесло! Ми замовили корпоративний сайт, і результат перевершив наші очікування. Дизайн стильний, все працює гладко, а головне - зручний для наших клієнтів."
+      "name": "Volodymyr",
+      "position": "Founder Tatarka",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
     },
     "card_2": {
-      "name": "Віктор",
-      "position": "Засновник Нерухомість",
-      "task_header": "Наше завдання",
-      "task": "Розробіть ринок доставки їжі та цільову сторінку для франшизи"
+      "name": "Viktor",
+      "position": "Founder Real Estate",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise"
     },
     "card_3": {
-      "name": "Іванна",
-      "position": "Засновник Л.Ф.",
-      "task_header": "Наше завдання",
-      "task": "Розробіть ринок доставки їжі та цільову сторінку для франшизи",
-      "description": "Професійна команда, яка дійсно знає своє ремесло! Ми замовили корпоративний сайт, і результат перевершив наші очікування. Дизайн стильний, все працює гладко, а головне - зручний для наших клієнтів."
+      "name": "Ivanna",
+      "position": "Founder LF",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
     },
     "card_4": {
-      "name": "Володимир",
-      "position": "Засновник Татарка",
-      "task_header": "Наше завдання",
-      "task": "Розробіть ринок доставки їжі та цільову сторінку для франшизи",
-      "description": "Професійна команда, яка дійсно знає своє ремесло! Ми замовили корпоративний сайт, і результат перевершив наші очікування. Дизайн стильний, все працює гладко, а головне - зручний для наших клієнтів."
+      "name": "Volodymyr",
+      "position": "Founder Tatarka",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
     }
   },
   "ContactSection": {

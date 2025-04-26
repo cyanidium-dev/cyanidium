@@ -35,6 +35,13 @@ module.exports = {
   plugins: [
     heroui({
       addCommonColors: true,
+      colors: {
+        primary: {
+          DEFAULT: "#C9F76F",
+          foreground: "#48036F",
+        },
+        myColor: "#48036F"
+      },
     }),
   ],
 };
