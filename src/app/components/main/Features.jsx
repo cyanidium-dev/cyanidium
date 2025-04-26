@@ -42,23 +42,25 @@ export default function Features() {
         <div className="flex justify-center gap-5">
           {features.map((feature) => (
             <div key={feature.name} className="flex flex-col gap-5">
-              <div className="relative overflow-hidden flex flex-col justify-start w-[333px] h-[480px] rounded-[8px] border-[1.5px] border-[#EEF3FF]">
-                <Image
-                  src={feature.img}
-                  alt={feature.name}
-                  width={500}
-                  height={500} // можешь подогнать под нужный размер
-                  className="w-full object-cover"
-                />
-                <div className="pl-7 pr-7 pt-8">
-                  <h2 className="pb-4 text-[#EAEBFF] font-actay text-[16px] font-bold uppercase">
-                    {feature.name}
-                    </h2>
-                  <span className="text-[#EAEBFF] font-raleway text-[14px] font-light">
-                    {feature.description}
-                  </span>
+              <div className="bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] p-[1px] rounded-lg">
+                <div className="relative overflow-hidden flex flex-col justify-start w-[333px] h-[480px] rounded-[7px] bg-[#030519]">
+                  <Image
+                    src={feature.img}
+                    alt={feature.name}
+                    width={500}
+                    height={500} // можешь подогнать под нужный размер
+                    className="w-full object-cover"
+                  />
+                  <div className="pl-7 pr-7 pt-8">
+                    <h2 className="pb-4 text-[#EAEBFF] font-actay text-[16px] font-bold uppercase">
+                      {feature.name}
+                      </h2>
+                    <span className="text-[#EAEBFF] font-raleway text-[14px] font-light">
+                      {feature.description}
+                    </span>
+                  </div>
+                  <div className="absolute -right-[35%] -bottom-[25%] w-[300px] h-[200px] bg-[#D4DFFF] opacity-20 blur-3xl rounded-full z-0"></div>
                 </div>
-                <div className="absolute -right-[35%] -bottom-[25%] w-[300px] h-[200px] bg-[#D4DFFF] opacity-20 blur-3xl rounded-full z-0"></div>
               </div>
               <div className="w-[333px] h-[160px] bg-[url('/image/featurebg.png')] bg-no-repeat bg-cover bg-center rounded-lg">
                 <div className="flex flex-col pl-7 pt-4">

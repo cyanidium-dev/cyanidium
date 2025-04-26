@@ -43,7 +43,7 @@ export default function Reviews() {
       <Container>
         <div className="px-[120px] min-h-[1000px]">
           <header className="mb-[47px]">
-            <h2 className="inline-block text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-center">REVIEWS - WHAT OUR CLIENTS SAY ABOUT US</h2>
+            <h2 className="inline-block text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-center">{t("title")}</h2>
           </header>
           <div className="flex gap-5 overflow-x-hidden">
             {reviews.map((review, index) => 
@@ -80,7 +80,7 @@ export default function Reviews() {
                   </>
                 ) : (
                   <div className="mt-auto mb-[10px] py-[22px] pl-[32px] pr-[60px]">
-                    <h3 className="mb-2 text-[16px] text-[#EAEBFF] font-semibold">OUR TASK</h3>
+                    <h3 className="mb-2 text-[16px] text-[#EAEBFF] font-semibold">{review.taskHeader}</h3>
                     <p className="text-[14px] text-[#EAEBFF]">
                       {review.task}
                     </p>
