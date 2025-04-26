@@ -60,7 +60,7 @@ export default function Price() {
 
                   {/* Контент */}
                   <div className="relative z-10">
-                    <h3 className="mb-[12px] font-actay text-[36px]" style={{ color: website.textColor }}>
+                    <h3 className="mb-[12px] font-actay text-[36px] uppercase" style={{ color: website.textColor }}>
                       {website.name}
                     </h3>
                     <p className="mb-[30px] text-[20px]" style={{ color: website.textColor }}>
