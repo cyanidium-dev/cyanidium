@@ -28,8 +28,6 @@ export default function Team() {
     ]
     
     return (
-      
-
       <div className="relative overflow-hidden">
         <div className="absolute top-[10%] -rotate-12 left-1/2 transform -translate-x-1/2 w-[70%] h-[800px] bg-[#0F41FD] opacity-30 blur-3xl rounded-full z-10"></div>
         <div className="absolute top-[10%] -rotate-12 left-1/2 transform -translate-x-1/2 w-[50%] h-[800px] bg-[#020418] opacity-90 blur-3xl rounded-full z-10"></div>
@@ -41,9 +39,8 @@ export default function Team() {
             className=""
           />
           </div>
-
-<Container>
-        <div className="px-[120px] min-h-[1000px]">
+        <Container>
+        <div className="relative z-10 px-[120px] min-h-[1000px]">
           <header className="mb-[53px] inline-flex gap-[111px] align-start">
             <h2 className="inline-block text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">Our team</h2>
             <p className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[18px]">We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.</p>
