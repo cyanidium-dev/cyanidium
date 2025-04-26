@@ -1,6 +1,140 @@
 {
-  "HomePage": {
-    "title": "Payments tool for software companies",
-    "description": "From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack."
+  "HomeSection": {
+    "title": "THE SITE DECIDES",
+    "question": "Do you want your business to \n make money?",
+    "button": "Discuss project",
+    "point_1": "Clean code",
+    "point_2": "Marketing \n approach",
+    "point_3": "Lifetime \n warranty"
+  },
+  "FeatureSection": {
+    "title": "Why should you \n Work with us?",
+    "point_1": "Average years of experiense",
+    "point_2": "successful projects",
+    "point_3": "Satisfied customers",
+    "feature_1": {
+      "name": "You don't need a technical specification",
+      "description": "Your task is to tell us about your problem, and we will create a technical specification and find the best solutions to solve it."
+    },
+    "feature_2": {
+      "name": "You don't overpay for unnecessary managers",
+      "description": "We are a small team focused on results. You communicate directly with specialists without wasting time on a manager."
+    },
+    "feature_3": {
+      "name": "Speed ​​and price democracy",
+      "description": "By following Elon Musk's principles, we were able to speed up our processes compared to other agencies. First, we create the most necessary website features."
+    }
+  },
+  "PortfolioSection": {
+    "title": "Our portfolio",
+    "button": "See more project",
+    "section_1": "Art",
+    "section_2": "Food",
+    "section_3": "Road",
+    "section_4": "Cars",
+    "section_5": "Course",
+    "section_6": "Animals",
+    "section_7": "Accounting",
+    "section_8": "Travel agency",
+    "section_9": "Real estate",
+    "section_10": "Ice",
+    "section_11": "Marketing",
+    "site_1": {
+      "name": "Landing page",
+      "description": "Car sales, franchise, course sales, road sign sales, accounting"
+    },
+    "site_2": {
+      "name": "Multipage site",
+      "description": "Art materials, food delivery, dry ice sales, food sales, travel agency"
+    },
+    "site_3": {
+      "name": "Marketplace",
+      "description": "Car sales, travel agency"
+    }
+  },
+  "SalePointSection": {
+    "title": "Your site is not just \n code, but a magnet for \n customers and profits!",
+    "message": "We will always be in touch with you and \n help with any questions or problems!"
+  },
+  "PriceSection": {
+    "title": "Types of website",
+    "description": "Price is calculated individually...",
+    "type_1": {
+      "name": "Lead Generation",
+      "description": "Application, servfices, information sites"
+    },
+    "type_2": {
+      "name": "Site Sales",
+      "description": "E-commerce with payment systems"
+    }
+  },
+  "TeamSection": {
+    "title": "Our team",
+    "description": "We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.",
+    "developer_1": {
+      "infinite_loop": "Developer",
+      "name": "Fedir Alpatov",
+      "position": "Full-Stack Developer",
+      "description": "Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales."
+    },
+    "developer_2": {
+      "infinite_loop": "Designer",
+      "name": "Diana Merkotun",
+      "position": "UI/UX Designer",
+      "description": "Creating a website for selling courses is a complex process that includes several key stages. Each of them is aimed at ensuring user convenience and effective sales."
+    }
+  },
+  "ReviewsSection": {
+    "title": "Reviews - what our \n clients say about us",
+    "card_1": {
+      "name": "Volodymyr",
+      "position": "Founder Tatarka",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
+    },
+    "card_2": {
+      "name": "Viktor",
+      "position": "Founder Real Estate",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise"
+    },
+    "card_3": {
+      "name": "Ivanna",
+      "position": "Founder LF",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
+    },
+    "card_4": {
+      "name": "Volodymyr",
+      "position": "Founder Tatarka",
+      "task_header": "Our task",
+      "task": "Develop a food delivery marketplace and landing page for a franchise",
+      "description": "A professional team that truly knows their craft! We ordered a corporate website, and the result exceeded our expectations. The design is stylish, everything runs smoothly, and most importantly, it's user-friendly for our clients."
+    }
+  },
+  "ContactSection": {
+    "title": "Websites That Work \n for Your Business",
+    "button": "Discuss project",
+    "point_1": "Your online presence matters! We develop modern, fast, and effective websites that not only look great but also deliver real results.",
+    "point_2": "Contact us – let’s make your website powerful and unique!"
+  },
+  "Navbar": {
+    "Portfolio": "Portfolio",
+    "About_us": "About us",
+    "Flow_development": "Flow development",
+    "Blog": "Blog",
+    "Contact_us": "Contact us"
+  },
+  "Footer": {
+    "Portfolio": "Portfolio",
+    "About_us": "About us",
+    "Flow_development": "Flow development",
+    "Blog": "Blog",
+    "Contact_us": "Contact us",
+    "Contact": "Contact us – let’s make your website \n powerful and unique!",
+    "Phone": "Phone number",
+    "Send": "Send"
   }
 }

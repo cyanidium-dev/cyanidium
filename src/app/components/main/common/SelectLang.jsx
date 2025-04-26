@@ -44,6 +44,7 @@ const SelectLang = () => {
         onSelectionChange={onChange}
         aria-label="Select Language"
         className="max-w-xs"
+        color="myColor"
       >
         {options.map(({ value, label }) => (
           <SelectItem key={value} value={value}>

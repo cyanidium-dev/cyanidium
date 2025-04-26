@@ -33,3 +33,11 @@ a {
   border: none;
   background-color: inherit;
 }
+
+@font-face {
+  font-family: 'Actay Wide';
+  src: url("../../public/fonts/ActayWide-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
