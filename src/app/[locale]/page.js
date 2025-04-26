@@ -14,9 +14,9 @@ export default function Home() {
       <Features />
       <Portfolio />
       <SalePoint /> */}
-      <Price />
-      {/* <Team />
-      <Reviews />
+      {/* <Price /> */}
+      <Team />
+      {/* <Reviews />
       <Contact /> */}
     </>
   );
