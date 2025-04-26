@@ -32,7 +32,7 @@ export default async function RootLayout({ children, params }) {
             {/* <Header />  */}
             <main className="bg-[#020418]">{children}</main>
             {/* <Navbar /> */}
-            {/* <Footer /> */}
+            <Footer />
           </Providers>
         </NextIntlClientProvider>
       </body>
