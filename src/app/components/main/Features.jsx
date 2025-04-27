@@ -67,21 +67,21 @@ export default function Features() {
                     />
                     <div className="pl-7 pr-7 pt-8">
                       <h2 className="whitespace-pre-wrap pb-4 text-[#EAEBFF] font-actay text-center md:text-left text-[14px] md:text-[16px] font-bold uppercase">
-                      {feature.name.split(" ").map((letter, i) => (
+                          {feature.name.split(" ").map((letter, i) => (
                             <motion.span
-                            key={i}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            transition={{ delay: 0.2 + i * 0.2 }} 
-                            className="inline-block mr-1" // ОБЯЗАТЕЛЬНО чтобы сохранять расстояния между словами
-                          >
+                              key={i}
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: 1 }}
+                              transition={{ delay: 0.2 + i * 0.2 }} 
+                              className="inline-block mr-1" // ОБЯЗАТЕЛЬНО чтобы сохранять расстояния между словами
+                            >
                             {letter}
                           </motion.span>
                           ))}
                         </h2>
-                      <span className="text-[#EAEBFF] font-raleway text-center md:text-left text-[12px] md:text-[14px] font-light">
+                      <p className="text-[#EAEBFF] font-raleway text-center md:text-left text-[12px] md:text-[14px] font-light">
                         {feature.description}
-                      </span>
+                      </p>
                     </div>
                     <div className="absolute -right-[35%] -bottom-[25%] w-[300px] h-[200px] bg-[#D4DFFF] opacity-20 blur-3xl rounded-full z-0"></div>
                   </div>

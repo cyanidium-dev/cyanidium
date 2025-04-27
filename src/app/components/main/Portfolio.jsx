@@ -80,11 +80,11 @@ export default function Portfolio() {
               <h1 className="text-[#EAEBFF] text-center font-actay text-[32px] lg:text-[44px] xl:text-[64px] font-bold uppercase">
                 {t("title")}
               </h1>
-              <button className="hidden md:block w-[315px] h-[50px] flex-shrink-0 rounded-[32px] border border-[#9097FC] bg-[#EAEBFF]">
+              {/* <button className="hidden md:block w-[315px] h-[50px] flex-shrink-0 rounded-[32px] border border-[#9097FC] bg-[#EAEBFF]">
                 <span className="text-[#020418] font-raleway text-[16px] font-bold uppercase">
                   {t("button")}
                 </span>
-              </button>
+              </button> */}
             </div>
             <div className="flex flex-wrap justify-between gap-4 xl:gap-9">
               {sections.map((s) => ( //поменять на ссылку
@@ -112,19 +112,19 @@ export default function Portfolio() {
                         <h2 className="text-[#EAEBFF] text-center font-actay text-[24px] lg:text-[36px] font-bold uppercase">
                           {site.name}
                         </h2>
-                        <svg
+                        {/* <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="33"
                           height="34"
                           viewBox="0 0 33 34"
                           fill="none"
                           className="w-[33px] h-[34px]"
-                        >
+                        > 
                           <path
                             d="M32.3255 1.37622C32.3175 0.823995 31.8633 0.382821 31.3111 0.39083L22.3121 0.521373C21.7598 0.529385 21.3187 0.983546 21.3267 1.53577C21.3347 2.088 21.7888 2.52918 22.3411 2.52116L30.3402 2.40513L30.4563 10.4043C30.4643 10.9565 30.9184 11.3977 31.4707 11.3897C32.0229 11.3817 32.4641 10.9275 32.4561 10.3753L32.3255 1.37622ZM1.71729 33.3059L32.0429 2.0875L30.6083 0.693949L0.282711 31.9124L1.71729 33.3059Z"
                             fill="white"
                           />
-                        </svg>
+                        </svg>*/}
                       </div>
                       <p className="text-[#EAEBFF] font-raleway text-center md:text-left text-[14px] lg:text-[18px] font-normal">
                         {site.description}
@@ -134,11 +134,11 @@ export default function Portfolio() {
                 </div>
               ))}
             </div>
-            <button className="block md:hidden w-[310px] h-[50px] flex-shrink-0 rounded-[32px] border border-[#9097FC] bg-[#EAEBFF]">
+              {/* <button className="block md:hidden w-[310px] h-[50px] flex-shrink-0 rounded-[32px] border border-[#9097FC] bg-[#EAEBFF]">
                 <span className="text-[#020418] font-raleway text-[14px] font-bold uppercase">
                   {t("button")}
                 </span>
-              </button>
+              </button> */}
           </div>
         </Container>
       </div>
