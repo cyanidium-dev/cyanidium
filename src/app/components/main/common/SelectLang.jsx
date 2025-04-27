@@ -1,64 +1,67 @@
-import { Select, SelectItem } from "@heroui/react";
+"use client";
+
+import { useEffect, useRef, useState } from "react";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
 
 const options = [
-  {
-    value: "en",
-    label: "En",
-  },
-  {
-    value: "uk",
-    label: "Uk",
-  },
+  { value: "en", label: "EN" },
+  { value: "uk", label: "UK" },
 ];
 
-const SelectLang = () => {
+export default function SelectLang() {
   const router = useRouter();
   const localeActive = useLocale();
-
-  const [currentLanguage, setCurrentLanguage] = useState(new Set([]));
-  const [isPending, setIsPending] = useState(false);
+  const [open, setOpen] = useState(false);
+  const [selected, setSelected] = useState("en");
+  const ref = useRef(null);
 
   useEffect(() => {
-    if (currentLanguage.size === 0) {
-      setCurrentLanguage(new Set([localeActive || "en"]));
+    if (localeActive) {
+      setSelected(localeActive);
     }
   }, [localeActive]);
 
-  const onChange = (newValue) => {
-    if (newValue) {
-      setIsPending(true);
-      const language = Array.from(newValue)[0];
-      router.replace(`/${language}`);
-      setCurrentLanguage(new Set([language]));
-      setIsPending(false);
-    }
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  const handleSelect = (value) => {
+    setSelected(value);
+    router.replace(`/${value}`);
+    setOpen(false);
   };
 
   return (
-    <div className="flex w-20 flex-wrap">
-      <Select
-        selectedKeys={isPending ? "" : currentLanguage}
-        onSelectionChange={onChange}
-        aria-label="Select Language"
-        className="max-w-xs"
-        classNames={{
-          trigger: "text-white",
-          placeholder: "text-white",
-          listbox: "bg-transparent",
-          item: "text-white data-[hover=true]:bg-white/10 data-[hover=true]:text-white",
-        }}
+    <div ref={ref} className="relative w-20 flex justify-end">
+      <button
+        onClick={() => setOpen((prev) => !prev)}
+        className="text-white border border-white rounded uppercase text-[16px] font-actay"
       >
-        {options.map(({ value, label }) => (
-          <SelectItem key={value} value={value}>
-            {label}
-          </SelectItem>
-        ))}
-      </Select>
+        {selected}
+      </button>
+
+      {open && (
+        <div className="absolute top-full mt-2 w-12 bg-[#020418] border border-white rounded shadow-lg">
+          {options.map(({ value, label }) => (
+            <div
+              key={value}
+              onClick={() => handleSelect(value)}
+              className="py-1 text-white hover:bg-white/10 cursor-pointer text-center text-[16px] font-actay"
+            >
+              {label}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
-};
-
-export default SelectLang;
+}
