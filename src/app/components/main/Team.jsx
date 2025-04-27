@@ -46,27 +46,16 @@ export default function Team() {
         <Container>
         <div className="relative z-10 px-[25px] md:px-20 lg:px-[120px] min-h-[1300px] md:min-h-[1350px] lg:min-h-[1200px]">
           <header className="mb-10 md:mb-[47px] lg:mb-[53px] flex flex-col lg:flex-row gap-5 lg:gap-[111px] align-start">
-            <motion.h2 initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
-            onViewportEnter={() => setStartAnimation(true)} className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">
-                          {words.map((word, wordIndex) => (
-              <span key={wordIndex} className="inline-block mr-2">
-                {word.split("").map((letter, letterIndex) => (
-                  <motion.span
-                    key={letterIndex}
-                    initial={{ opacity: 0 }}
-                    animate={startAnimation ? { opacity: 1 } : {}}
-                    transition={{ delay: (wordIndex * 0.2) + (letterIndex * 0.05) }}
-                    className="inline-block"
-                  >
-                    {letter}
-                  </motion.span>
-                ))}
-              </span>
-            ))}
+            <motion.h2 initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.3}}
+                  viewport={{ once: true }} className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">
+                  {t('title')}
             </motion.h2>
-            <p className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[14px] md:text-base lg:text-[18px]">We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.</p>
+            <motion.p initial={{ opacity: 0, x: 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.3}}
+                  viewport={{ once: true }} className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[14px] md:text-base lg:text-[18px]">{t("description")}</motion.p>
           </header>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {teamMembers.map((member, index) => (
