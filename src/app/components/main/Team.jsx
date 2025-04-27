@@ -20,7 +20,8 @@ export default function Team() {
         position: t("developer_1.position"),
         description: t("developer_1.description"),
         infiniteLoop: t("developer_1.infinite_loop"),
-        img: '/image/team-member-1.jpg', 
+        img: '/image/team-member-1.jpg',
+        link: '@FreelancerOnMondays', 
       },
       {
         name: t("developer_2.name"),
@@ -28,6 +29,7 @@ export default function Team() {
         description: t("developer_2.description"),
         infiniteLoop: t("developer_2.infinite_loop"),
         img: '/image/team-member-2.jpg',
+        link: '@di_merk', 
       },
     ]
     
@@ -113,15 +115,30 @@ export default function Team() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.3 + index * 0.3}}
                   viewport={{ once: true }} className="mb-5 text-sm md:text-[15px] lg:text-base text-[#EAEBFF] font-semibold">{member.position}</motion.h4>
-                  <div className="flex items-center gap-[27px]">
-                    <motion.p initial={{ opacity: 0, x: -50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 1, delay: 0.4 + index * 0.3}}
-                  viewport={{ once: true }} className="text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light">
-                      {member.description}
-                    </motion.p>
-                    <img className="absolute top-0 right-0 w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:h-[60px] lg:w-[60px] md:static" src="/icons/link-arrow.png" alt="Link icon" />
-                  </div>
+                  <div className="flex items-center gap-[27px] relative">
+                  <motion.p
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.4 + index * 0.3 }}
+                    viewport={{ once: true }}
+                    className="text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light"
+                  >
+                    {member.description}
+                  </motion.p>
+
+                  <a
+                    href={`https://t.me/${member.link.replace('@', '')}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-0 right-0 md:static"
+                  >
+                    <img
+                      className="w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:h-[60px] lg:w-[60px]"
+                      src="/icons/link-arrow.png"
+                      alt="Link icon"
+                    />
+                  </a>
+                </div>
                 </div>
               </div>
             </motion.article>
