@@ -43,7 +43,7 @@ export default function Features() {
             ))}
           </h1>
           <div className="flex flex-col justify-center items-center gap-5">
-            <div className="w-[335px] flex flex-col lg:flex-row item-center justify-center gap-5">
+            <div className="w-[335px] flex flex-col xl:flex-row item-center justify-center gap-5">
               {features.map((feature) => (
                 <div key={feature.name} className="flex flex-col w-[335px] gap-5">
                   <div className="bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] p-[1px] rounded-lg">
@@ -69,7 +69,7 @@ export default function Features() {
                 </div>
               ))}
             </div>
-            <div className="flex flex-col lg:flex-row items-center justify-center gap-5">
+            <div className="flex flex-col xl:flex-row items-center justify-center gap-5">
               {features.map((feature) => (
                 <div key={feature.name} className="w-[333px] h-[160px] bg-[url('/image/featurebg.png')] bg-no-repeat bg-cover bg-center rounded-lg">
                   <div className="flex flex-col md:pl-7 pt-4">

@@ -5,9 +5,9 @@ export default function Footer() {
   const t = useTranslations("Footer");
   return (
     <footer className="flex flex-col items-center bg-[linear-gradient(30deg,_#05000E_10%,_#0B133F_60%,_#16237A_140%)]">
-      <div className="pt-[80px] lg:w-[1280px] overflow-hidden">
+      <div className="pt-[80px] xl:w-[1280px] overflow-hidden">
         {/* Левая часть */}
-        <div className="flex flex-col lg:flex-row gap-10 justify-between px-[20px] md:px-[120px] pb-[70px]">
+        <div className="flex flex-col xl:flex-row gap-10 justify-between px-[20px] md:px-[120px] pb-[70px]">
           <div className="flex flex-col items-start self-stretch">
             <h2 className="text-[24px] md:text-[32px] font-normal leading-[103.301%] uppercase text-white font-actay pb-[16px]">Cyanidium.dev</h2>
             <span className="text-white/80 pb-[36px] leading-relaxed text-[12px] md:text-[16px]">
@@ -31,8 +31,8 @@ export default function Footer() {
           </div>
 
           {/* Навигация и соцсети */}
-          <div className="flex flex-row justify-between items-end lg:justify-start lg:flex-col">
-            <ul className="flex flex-col lg:flex-row justify-end flex-wrap gap-7 md:gap-10 text-sm uppercase font-semibold">
+          <div className="flex flex-row justify-between items-end xl:justify-start xl:flex-col">
+            <ul className="flex flex-col xl:flex-row justify-end flex-wrap gap-7 md:gap-10 text-sm uppercase font-semibold">
               {routes.map((route) => (
                 <li key={route.path}>
                   <a href={route.path} className="text-white font-raleway text-[14px] font-semibold uppercase">
