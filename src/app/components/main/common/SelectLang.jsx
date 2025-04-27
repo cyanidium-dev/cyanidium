@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 const options = [
   { value: "en", label: "EN" },
   { value: "uk", label: "UK" },
+  { value: "ru", label: "RU" },
 ];
 
 export default function SelectLang() {
