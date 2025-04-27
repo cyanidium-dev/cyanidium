@@ -10,10 +10,10 @@ import Contact from "../components/main/Contact";
 export default function Home() {
   return (
     <>
-      {/* <Hero />
+      <Hero />
       <Features />
       <Portfolio />
-      <SalePoint /> */}
+      <SalePoint /> 
       <Price />
       <Team />
       <Reviews />
