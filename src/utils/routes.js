@@ -19,7 +19,7 @@ export const footerLinks = [
 
 export const socialLinks = [
   { name: "Instagram", url: "https://instagram.com", icon: FaInstagram },
-  { name: "Youtube", url: "https://youtube.com", icon: FaYoutube },
+  // { name: "Youtube", url: "https://youtube.com", icon: FaYoutube },
   { name: "Tiktok", url: "https://tiktok.com", icon: FaTiktok },
-  { name: "Facebook", url: "https://facebook.com", icon: FaFacebook },
+  // { name: "Facebook", url: "https://facebook.com", icon: FaFacebook },
 ];
