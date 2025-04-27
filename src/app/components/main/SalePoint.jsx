@@ -8,7 +8,7 @@ export default function SalePoint() {
     const t = useTranslations("SalePointSection");
     return (
       <div className="relative overflow-hidden">
-        <div className="absolute top-[15%] -left-[70%] lg:-left-[10%] w-[500px] h-[600px] bg-[#223AD5] opacity-20 blur-[280px] rounded-full z-0"></div>
+        <div className="absolute top-[15%] -left-[115%] sm:-left-[30%] lg:-left-[20%] xl:-left-[10%] w-[500px] h-[600px] opacity-80 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
         <Container>
           <div className="min-h-[1000px] flex flex-col items-center justify-center">
             <h1 className="pb-6 text-center font-actay text-[24px] lg:text-[44px] xl:text-[64px] font-bold uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent">

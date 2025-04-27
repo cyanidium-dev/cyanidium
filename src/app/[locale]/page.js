@@ -17,7 +17,7 @@ export default function Home() {
       <Price />
       <Team />
       <Reviews />
-      {/* <Contact /> */}
+      <Contact />
     </>
   );
 }
