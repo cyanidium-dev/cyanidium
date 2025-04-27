@@ -1,7 +1,8 @@
 "use client";
 
 import Container from "@/utils/Container";
-import { Button } from "@heroui/react";
+import { Button } from "@heroui/react"
+import Laptop from './common/Laptop';
 import { useTranslations } from "next-intl";
 
 import Image from "next/image"; 
@@ -34,6 +35,8 @@ export default function Hero() {
       <div className="absolute -right-[5%] bottom-[5%] w-[600px] h-[400px] bg-black opacity-80 blur-3xl rounded-full z-0"></div>
       <Container>
         <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-10">
+            <Laptop/>
+            {/* <div className="absolute left-[45%] -translate-x-[45%] top-[68%] w-[50%] h-[50px] bg-[#a8aece] blur-[5px] rounded-b-2xl z-0"></div> */}
             <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-0">
               {/* Левая часть */}
               <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start lg:justify-between">
@@ -54,13 +57,12 @@ export default function Hero() {
                   </div>
                 </button>
               </div>
-
               {/* Правая часть */}
               <div className="order-1 lg:order-2 flex pt-[12px] flex-col lg:flex-row items-center lg:items-start gap-8">
                 <div className="order-2 lg:order-1">
                   <StarIcon width={48} height={48}/>
                 </div>
-                <div className="flex justify-between lg:gap-12 order-1 lg:order-2 w-full">
+                <div className="flex justify-between order-1 lg:order-2 w-full">
                   <div className="text-left lg:text-right text-[#EAEBFF] uppercase font-actay text-[20.573px] leading-[103.301%]">
                     <div className="pb-[5px]">CYANIDIUM.</div>
                     <div>DEV</div>
