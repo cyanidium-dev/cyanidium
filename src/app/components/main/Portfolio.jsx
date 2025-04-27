@@ -58,7 +58,7 @@ export default function Portfolio() {
       {
         img: "/image/site3.png",
         name: t("site_3.name"),
-        description: t("site_3.name"),
+        description: t("site_3.description"),
       },
     ];
 
