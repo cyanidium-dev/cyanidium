@@ -14,10 +14,10 @@ export default function Home() {
       <Features />
       <Portfolio />
       <SalePoint /> */}
-      {/* <Price /> */}
+      <Price />
       <Team />
-      {/* <Reviews />
-      <Contact /> */}
+      <Reviews />
+      {/* <Contact /> */}
     </>
   );
 }

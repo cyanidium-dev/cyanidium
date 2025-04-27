@@ -39,7 +39,7 @@ export default function Team() {
           />
           </div>
         <Container>
-        <div className="relative z-10 px-[25px] md:px-20 lg:px-[120px] min-h-[1000px]">
+        <div className="relative z-10 px-[25px] md:px-20 lg:px-[120px] min-h-[1200px]">
           <header className="mb-10 md:mb-[47px] lg:mb-[53px] flex flex-col lg:flex-row gap-5 lg:gap-[111px] align-start">
             <h2 className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">Our team</h2>
             <p className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[14px] md:text-base lg:text-[18px]">We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.</p>
