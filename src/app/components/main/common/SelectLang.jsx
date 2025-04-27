@@ -44,7 +44,12 @@ const SelectLang = () => {
         onSelectionChange={onChange}
         aria-label="Select Language"
         className="max-w-xs"
-        color="myColor"
+        classNames={{
+          trigger: "text-white",
+          placeholder: "text-white",
+          listbox: "bg-transparent",
+          item: "text-white data-[hover=true]:bg-white/10 data-[hover=true]:text-white",
+        }}
       >
         {options.map(({ value, label }) => (
           <SelectItem key={value} value={value}>

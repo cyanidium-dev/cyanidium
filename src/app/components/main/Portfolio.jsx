@@ -64,9 +64,9 @@ export default function Portfolio() {
 
     return (
       <div className="relative overflow-hidden">
-        <div className="absolute top-[10%] left-1/2 transform -translate-x-1/2 w-[90%] h-[800px] bg-[#0F41FD] opacity-30 blur-3xl rounded-full z-10"></div>
-        <div className="absolute top-[30%] left-1/2 transform -translate-x-1/2 w-full h-[800px] bg-[#020418] opacity-90 blur-3xl rounded-full z-10"></div>
-        <div className="absolute rotate-2 top-[10%] left-1/2 transform -translate-x-1/2 h-[40%] w-[120%] z-0">
+        <div className="absolute top-[5%] md:top-[10%] left-1/2 transform -translate-x-1/2 w-[90%] h-[800px] bg-[#0F41FD] opacity-30 blur-3xl rounded-full z-10"></div>
+        <div className="absolute top-[15%] md:top-[30%] left-1/2 transform -translate-x-1/2 w-full h-[800px] bg-[#020418] opacity-90 blur-3xl rounded-full z-10"></div>
+        <div className="absolute rotate-2 -top-[5%] md:top-[10%] left-1/2 transform -translate-x-1/2 h-[40%] w-[120%] z-0">
           <Image
             src="/image/herobg.png"
             alt="Phone"
@@ -75,31 +75,31 @@ export default function Portfolio() {
           />
         </div>
         <Container>
-          <div className="relative z-10 min-h-[1500px] flex flex-col justify-center items-center gap-10 pl-[110px] pr-[110px]">
-            <div className="flex items-center justify-between w-full">
-              <h1 className="text-[#EAEBFF] text-center font-actay text-[64px] font-bold uppercase">
+          <div className="relative z-10 min-h-[1300px] md:min-h-[1500px] flex flex-col justify-center items-center gap-10 pl-[20px] pr-[20px] md:pl-[70px] md:pr-[70px] xl:pl-[110px] xl:pr-[110px]">
+            <div className="flex items-center justify-center md:justify-between w-full">
+              <h1 className="text-[#EAEBFF] text-center font-actay text-[32px] lg:text-[44px] xl:text-[64px] font-bold uppercase">
                 {t("title")}
               </h1>
-              <button className="w-[315px] h-[50px] flex-shrink-0 rounded-[32px] border border-[#9097FC] bg-[#EAEBFF]">
+              <button className="hidden md:block w-[315px] h-[50px] flex-shrink-0 rounded-[32px] border border-[#9097FC] bg-[#EAEBFF]">
                 <span className="text-[#020418] font-raleway text-[16px] font-bold uppercase">
                   {t("button")}
                 </span>
               </button>
             </div>
-            <div className="flex flex-wrap gap-9">
+            <div className="flex flex-wrap justify-between gap-4 xl:gap-9">
               {sections.map((s) => ( //поменять на ссылку
-                <div key={s.section} className="text-[#EAEBFF] font-raleway text-[18px] font-normal">
+                <div key={s.section} className="text-[#EAEBFF] font-raleway text-[12px] lg:text-[16px] xl:text-[18px] font-normal">
                   <p>
                     {s.section}
                   </p>
                 </div>
               ))}
             </div>
-            <div className="w-full flex flex-col gap-12">
+            <div className="w-full flex flex-col gap-20 xl:gap-12">
               {sites.map((site) => (
                 <div key={site.name} className="flex flex-col gap-12">
-                  <div className="w-full h-[1px] bg-[linear-gradient(90deg,_#4D62CA_0%,_#03072F_100%)]"></div>
-                  <div className="flex gap-11">
+                  <div className="hidden md:block w-full h-[1px] bg-[linear-gradient(90deg,_#4D62CA_0%,_#03072F_100%)]"></div>
+                  <div className="flex flex-col items-center md:flex-row gap-11">
                     <Image
                       src={site.img}
                       alt={site.name}
@@ -107,9 +107,9 @@ export default function Portfolio() {
                       height={500}
                       className="w-[260px] object-cover"
                     />
-                    <div className="flex flex-col gap-5 items-start justify-center">
+                    <div className="flex flex-col gap-5 items-center md:items-start justify-center md:justify-center">
                       <div className="flex items-center gap-8">
-                        <h2 className="text-[#EAEBFF] text-center font-actay text-[36px] font-bold uppercase">
+                        <h2 className="text-[#EAEBFF] text-center font-actay text-[24px] lg:text-[36px] font-bold uppercase">
                           {site.name}
                         </h2>
                         <svg
@@ -126,7 +126,7 @@ export default function Portfolio() {
                           />
                         </svg>
                       </div>
-                      <p className="text-[#EAEBFF] font-raleway text-[18px] font-normal">
+                      <p className="text-[#EAEBFF] font-raleway text-center md:text-left text-[14px] lg:text-[18px] font-normal">
                         {site.description}
                       </p>
                     </div>
@@ -134,6 +134,11 @@ export default function Portfolio() {
                 </div>
               ))}
             </div>
+            <button className="block md:hidden w-[310px] h-[50px] flex-shrink-0 rounded-[32px] border border-[#9097FC] bg-[#EAEBFF]">
+                <span className="text-[#020418] font-raleway text-[14px] font-bold uppercase">
+                  {t("button")}
+                </span>
+              </button>
           </div>
         </Container>
       </div>

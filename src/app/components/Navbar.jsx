@@ -34,7 +34,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <ul className={`p-2 h-[55px] fixed bottom-[65px] left-1/2 -translate-x-1/2 bg-[#e7e6f3] rounded-[4px] shadow-lg flex gap-[40px] z-[1000] items-center justify-center" transition-all duration-300 
+    <ul className={`hidden xl:flex p-2 h-[55px] fixed bottom-[65px] left-1/2 -translate-x-1/2 bg-[#e7e6f3] rounded-[4px] shadow-lg gap-[40px] z-[1000] items-center justify-center" transition-all duration-300 
       ${hideNavbar ? "opacity-0 pointer-events-none" : "opacity-100"}
     `}>
       {routes.map((route) => {
