@@ -1,13 +1,17 @@
 "use client";
 
 import Container from "@/utils/Container";
-import { useRef, useEffect } from "react";
-
+import { useRef, useEffect, useState } from "react";
+import {motion} from 'framer-motion'
 import { useTranslations } from "next-intl";
 
 export default function Reviews() {
     const scrollContainerRef = useRef(null);
     const t = useTranslations("ReviewsSection");
+        const title = t("title");
+    
+        const words = title.split(" ");
+          const [startAnimation, setStartAnimation] = useState(false);
     useEffect(() => {
       const container = scrollContainerRef.current;
       if (!container) return;
@@ -58,13 +62,35 @@ export default function Reviews() {
     ]
     return (
       <Container>
-        <div className="px-[25px] md:px-20 lg:px-[120px] min-h-[1000px]">
-          <header className="mb-[47px]">
-            <h2 className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-center">{t("title")}</h2>
+        <div className="min-h-[1000px]">
+          <header className="mb-[47px] px-[25px] md:px-20 lg:pl-[120px]">
+            <motion.h2 initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            onViewportEnter={() => setStartAnimation(true)}  className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-center">
+              {words.map((word, wordIndex) => (
+              <span key={wordIndex} className="inline-block mr-2">
+                {word.split("").map((letter, letterIndex) => (
+                  <motion.span
+                    key={letterIndex}
+                    initial={{ opacity: 0 }}
+                    animate={startAnimation ? { opacity: 1 } : {}}
+                    transition={{ delay: (wordIndex * 0.2) + (letterIndex * 0.05) }}
+                    className="inline-block"
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+            </motion.h2>
           </header>
-          <div ref={scrollContainerRef} className="flex gap-5 overflow-y-hidden overflow-x-auto scrollbar-hide" style={{ touchAction: "pan-x", WebkitOverflowScrolling: 'touch' }}>
+          <div ref={scrollContainerRef} className="flex gap-5 overflow-y-hidden overflow-x-auto scrollbar-hide px-[25px]" style={{ touchAction: "pan-x", WebkitOverflowScrolling: 'touch' }}>
             {reviews.map((review, index) => 
-              <div key={index} className={`${review.description ? 'min-w-[333px]' : 'min-w-[255px]'} h-[400px] md:h-[435px] lg:min-w-[333px] p-[1px] rounded-lg bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)]`}>
+              <motion.div initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 + index * 0.3}}
+              viewport={{ once: true }} key={index} className={`${review.description ? 'min-w-[333px]' : 'min-w-[255px]'} h-[400px] md:h-[435px] lg:min-w-[333px] p-[1px] rounded-lg bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)]`}>
                 <div className="w-full h-full flex flex-col rounded-[7px]" style={
                 index % 2 === 0
                   ? {
@@ -105,7 +131,7 @@ export default function Reviews() {
                   </div>
                 )}
                 </div>
-              </div>
+              </motion.div>
               )}      
           </div>
         </div>

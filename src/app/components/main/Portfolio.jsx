@@ -58,7 +58,7 @@ export default function Portfolio() {
       {
         img: "/image/site3.png",
         name: t("site_3.name"),
-        description: t("site_3.name"),
+        description: t("site_3.description"),
       },
     ];
 
@@ -66,7 +66,7 @@ export default function Portfolio() {
       <div className="relative overflow-hidden">
         <div className="absolute top-[5%] md:top-[10%] left-1/2 transform -translate-x-1/2 w-[90%] h-[800px] bg-[#0F41FD] opacity-30 blur-3xl rounded-full z-10"></div>
         <div className="absolute top-[15%] md:top-[30%] left-1/2 transform -translate-x-1/2 w-full h-[800px] bg-[#020418] opacity-90 blur-3xl rounded-full z-10"></div>
-        <div className="absolute rotate-2 -top-[5%] md:top-[10%] left-1/2 transform -translate-x-1/2 h-[40%] w-[120%] z-0">
+        <div className="absolute rotate-2 top-[5%] md:top-[10%] left-1/2 transform -translate-x-1/2 h-[20%] lg:h-[40%] w-[120%] z-0">
           <Image
             src="/image/herobg.png"
             alt="Phone"
@@ -75,7 +75,7 @@ export default function Portfolio() {
           />
         </div>
         <Container>
-          <div className="relative z-10 min-h-[1300px] md:min-h-[1500px] flex flex-col justify-center items-center gap-10 pl-[20px] pr-[20px] md:pl-[70px] md:pr-[70px] xl:pl-[110px] xl:pr-[110px]">
+          <div className="relative z-10 min-h-[1200px] flex flex-col justify-center items-center gap-10 pl-[20px] pr-[20px] md:pl-[70px] md:pr-[70px] xl:pl-[110px] xl:pr-[110px]">
             <div className="flex items-center justify-center md:justify-between w-full">
               <h1 className="text-[#EAEBFF] text-center font-actay text-[32px] lg:text-[44px] xl:text-[64px] font-bold uppercase">
                 {t("title")}

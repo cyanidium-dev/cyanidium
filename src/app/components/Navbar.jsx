@@ -4,6 +4,7 @@ import { routes } from "@/utils/routes";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Navbar() {
   const t = useTranslations("Navbar");
@@ -34,7 +35,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <ul className={`hidden xl:flex p-2 h-[55px] fixed bottom-[65px] left-1/2 -translate-x-1/2 bg-[#e7e6f3] rounded-[4px] shadow-lg gap-[40px] z-[1000] items-center justify-center" transition-all duration-300 
+    <motion.ul
+      className={`hidden xl:flex p-2 h-[55px] fixed bottom-[65px] left-1/2 -translate-x-1/2 bg-[#e7e6f3] rounded-[4px] shadow-lg gap-[40px] z-[1000] items-center justify-center" transition-all duration-300 
       ${hideNavbar ? "opacity-0 pointer-events-none" : "opacity-100"}
     `}>
       {routes.map((route) => {
@@ -56,6 +58,6 @@ export default function Navbar() {
           </li>
         );
       })}
-    </ul>
+    </motion.ul>
   );
 }

@@ -51,7 +51,7 @@ export default function Features() {
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8, y: 50 }}
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.8 + index * 0.3}}
+                  transition={{ duration: 1, delay: 0.2 + index * 0.3}}
                   viewport={{ once: true }}
                   key={feature.name} 
                   className="flex flex-col w-[335px] gap-5"
@@ -72,7 +72,7 @@ export default function Features() {
                             key={i}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
-                            transition={{ delay: 0.8 + i * 0.2 }} 
+                            transition={{ delay: 0.2 + i * 0.2 }} 
                             className="inline-block mr-1" // ОБЯЗАТЕЛЬНО чтобы сохранять расстояния между словами
                           >
                             {letter}
@@ -94,7 +94,7 @@ export default function Features() {
                 <motion.div
                   initial={{ opacity: 0, y: 50 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 1, delay: 0.8 + index * 0.3}}
+                  transition={{ duration: 1, delay: 0.2 + index * 0.3}}
                   viewport={{ once: true }}
                   key={feature.name} 
                   className="w-[333px] h-[160px] bg-[url('/image/featurebg.png')] bg-no-repeat bg-cover bg-center rounded-lg"

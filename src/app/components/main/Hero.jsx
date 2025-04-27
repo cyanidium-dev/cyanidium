@@ -4,6 +4,7 @@ import Container from "@/utils/Container";
 import { Button } from "@heroui/react"
 import Laptop from './common/Laptop';
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 
 import Image from "next/image"; 
 import SelectLang from "../main/common/SelectLang";
@@ -39,11 +40,17 @@ export default function Hero() {
             {/* <div className="absolute left-[45%] -translate-x-[45%] top-[68%] w-[50%] h-[50px] bg-[#a8aece] blur-[5px] rounded-b-2xl z-0"></div> */}
             <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-0">
               {/* Левая часть */}
-              <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start lg:justify-between">
+              <motion.div 
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="order-2 lg:order-1 flex flex-col items-center lg:items-start lg:justify-between"
+              >
                 <h1 className="text-[#EAEBFF] font-bold text-[32px] md:text-[44px] lg:text-[64px] uppercase mb-4 font-actay">
                   {t("title")}
                 </h1>
-                <p className="text-[#EAEBFF] text-[14px] md:text-[16px] lg:text-[20px] mb-[38px] font-raleway">
+                <p className="text-[#EAEBFF] text-[14px] md:text-[16px] text-center lg:text-left lg:text-[20px] mb-[38px] font-raleway">
                   {t("question").split("\n").map((line, i) => (
                     <span key={i}>
                       {line}
@@ -56,26 +63,38 @@ export default function Hero() {
                     {t("button")}
                   </div>
                 </button>
-              </div>
+              </motion.div>
               {/* Правая часть */}
-              <div className="order-1 lg:order-2 flex pt-[12px] flex-col lg:flex-row items-center lg:items-start gap-8">
+              <motion.div 
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="order-1 lg:order-2 flex pt-[12px] flex-col lg:flex-row items-center lg:items-start gap-8"
+              >
                 <div className="order-2 lg:order-1">
                   <StarIcon width={48} height={48}/>
                 </div>
                 <div className="flex justify-between order-1 lg:order-2 w-full">
                   <div className="text-left lg:text-right text-[#EAEBFF] uppercase font-actay text-[20.573px] leading-[103.301%]">
-                    <div className="pb-[5px]">CYANIDIUM.</div>
+                    <div className="pb-[5px]">Code-art</div>
                     <div>DEV</div>
                   </div>
                   <div>
                     <SelectLang />
                   </div>
                 </div>
-              </div>
+              </motion.div>
             </div>
 
             {/* Средняя секция */}
-            <div className="flex justify-end pt-[270px] lg:pt-0">
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="flex justify-end pt-[270px] lg:pt-0"
+            >
               <div className="flex flex-col justify-center items-start gap-[40px]">
                 {[t("point_1"), t("point_2"), t("point_3")].map((text, idx) => (
                   <p
@@ -88,7 +107,7 @@ export default function Hero() {
                   </p>
                 ))}
               </div>
-            </div>
+            </motion.div>
             <div className="flex lg:hidden justify-center pt-7">
               <button className="w-[245px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
                 <div className="text-[#020418] text-[14px] font-bold uppercase font-raleway">
