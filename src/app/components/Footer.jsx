@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Левая часть */}
         <div className="flex flex-col xl:flex-row gap-10 justify-between px-[20px] md:px-[120px] pb-[70px]">
           <div className="flex flex-col items-start self-stretch">
-            <h2 className="text-[24px] md:text-[32px] font-normal leading-[103.301%] uppercase text-white font-actay pb-[16px]">Cyanidium.dev</h2>
+            <h2 className="text-[24px] md:text-[32px] font-normal leading-[103.301%] uppercase text-white font-actay pb-[16px]">Code-art.dev</h2>
             <span className="text-white/80 pb-[36px] leading-relaxed text-[12px] md:text-[16px]">
               {t("Contact").split("\n").map((line, i) => (
                 <span key={i}>
@@ -31,28 +31,29 @@ export default function Footer() {
           </div>
 
           {/* Навигация и соцсети */}
-          <div className="flex flex-row justify-between items-end xl:justify-start xl:flex-col">
-            <ul className="flex flex-col xl:flex-row justify-end flex-wrap gap-7 md:gap-10 text-sm uppercase font-semibold">
-              {routes.map((route) => (
-                <li key={route.path}>
-                  <a href={route.path} className="text-white font-raleway text-[14px] font-semibold uppercase">
-                  {t(route.name)}
+          <div className="flex flex-col xl:flex-row justify-between xl:justify-start gap-[70px]">
+            <div className="flex flex-col gap-4">
+              <h3 className="text-white font-actay text-[16px] font-bold leading-[103.301%] uppercase">{t("Contacts")}</h3>
+              <ul className="flex flex-col gap-3 md:gap-3 text-sm uppercase font-semibold items-start">
+                  <li className="text-white text-center font-raleway text-[14px] font-light leading-[18px] uppercase">+380-97-006-87-07</li>
+                  <li className="text-white text-center font-raleway text-[14px] font-light leading-[18px] uppercase">cyanidiumdev@gmail.com</li>
+              </ul>
+            </div>
+            <div className="flex flex-col gap-4">
+              <h3 className="text-white font-actay text-[16px] font-bold leading-[103.301%] uppercase">{t("Media")}</h3>  
+              <div className="flex justify-start xl:justify-end items-center gap-[18px]">
+                {socialLinks.map((social) => (
+                  <a
+                    key={social.url}
+                    href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white hover:text-blue-400 transition"
+                  >
+                    <social.icon className="w-5 h-5" />
                   </a>
-                </li>
-              ))}
-            </ul>
-            <div className="flex justify-end items-center gap-[18px] mt-[24px]">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.url}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white hover:text-blue-400 transition"
-                >
-                  <social.icon className="w-5 h-5" />
-                </a>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>

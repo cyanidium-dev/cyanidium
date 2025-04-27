@@ -77,7 +77,7 @@ export default function Hero() {
                 </div>
                 <div className="flex justify-between order-1 lg:order-2 w-full">
                   <div className="text-left lg:text-right text-[#EAEBFF] uppercase font-actay text-[20.573px] leading-[103.301%]">
-                    <div className="pb-[5px]">CYANIDIUM.</div>
+                    <div className="pb-[5px]">Code-art</div>
                     <div>DEV</div>
                   </div>
                   <div>

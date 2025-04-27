@@ -75,7 +75,7 @@ export default function Portfolio() {
           />
         </div>
         <Container>
-          <div className="relative z-10 min-h-[1200px] md:min-h-[1500px] flex flex-col justify-center items-center gap-10 pl-[20px] pr-[20px] md:pl-[70px] md:pr-[70px] xl:pl-[110px] xl:pr-[110px]">
+          <div className="relative z-10 min-h-[1200px] flex flex-col justify-center items-center gap-10 pl-[20px] pr-[20px] md:pl-[70px] md:pr-[70px] xl:pl-[110px] xl:pr-[110px]">
             <div className="flex items-center justify-center md:justify-between w-full">
               <h1 className="text-[#EAEBFF] text-center font-actay text-[32px] lg:text-[44px] xl:text-[64px] font-bold uppercase">
                 {t("title")}

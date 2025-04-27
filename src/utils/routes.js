@@ -1,4 +1,4 @@
-import { FaFacebook, FaTwitter, FaInstagram, FaGithub, FaYoutube, FaTicketAlt, FaTiktok } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaGithub, FaYoutube, FaTicketAlt, FaTiktok, FaTelegram } from "react-icons/fa";
 
 // Основные ссылки для хедера, бургера и других общих компонентов
 export const routes = [
@@ -21,5 +21,6 @@ export const socialLinks = [
   { name: "Instagram", url: "https://instagram.com", icon: FaInstagram },
   // { name: "Youtube", url: "https://youtube.com", icon: FaYoutube },
   { name: "Tiktok", url: "https://tiktok.com", icon: FaTiktok },
+  { name: "Telegram", url: "https://telegram.com", icon: FaTelegram },
   // { name: "Facebook", url: "https://facebook.com", icon: FaFacebook },
 ];
