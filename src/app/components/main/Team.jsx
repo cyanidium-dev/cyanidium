@@ -2,13 +2,18 @@
 
 import { useState } from "react";
 import Container from "@/utils/Container";
-
+import {motion} from 'framer-motion'
 import { useTranslations } from "next-intl";
 import Image from "next/image"; 
 
 export default function Team() {
+  
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const t = useTranslations("TeamSection");
+    const title = t("title");
+
+    const words = title.split(" ");
+      const [startAnimation, setStartAnimation] = useState(false);
     const teamMembers = [
       {
         name: t("developer_1.name"),
@@ -41,12 +46,35 @@ export default function Team() {
         <Container>
         <div className="relative z-10 px-[25px] md:px-20 lg:px-[120px] min-h-[1300px] md:min-h-[1350px] lg:min-h-[1200px]">
           <header className="mb-10 md:mb-[47px] lg:mb-[53px] flex flex-col lg:flex-row gap-5 lg:gap-[111px] align-start">
-            <h2 className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">Our team</h2>
+            <motion.h2 initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            onViewportEnter={() => setStartAnimation(true)} className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">
+                          {words.map((word, wordIndex) => (
+              <span key={wordIndex} className="inline-block mr-2">
+                {word.split("").map((letter, letterIndex) => (
+                  <motion.span
+                    key={letterIndex}
+                    initial={{ opacity: 0 }}
+                    animate={startAnimation ? { opacity: 1 } : {}}
+                    transition={{ delay: (wordIndex * 0.2) + (letterIndex * 0.05) }}
+                    className="inline-block"
+                  >
+                    {letter}
+                  </motion.span>
+                ))}
+              </span>
+            ))}
+            </motion.h2>
             <p className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[14px] md:text-base lg:text-[18px]">We are a team of creative developers, designers, and marketers who have come together to create effective, stylish, and technologically advanced web solutions.</p>
           </header>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {teamMembers.map((member, index) => (
-            <article
+            <motion.article
+            initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1, delay: 0.2 + index * 0.3}}
+                  viewport={{ once: true }}
               key={index}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
@@ -86,19 +114,28 @@ export default function Team() {
               }}>
                 <div className="absolute bottom-0 left-0 w-full h-[60%] bg-gradient-to-b from-transparent to-[#03051A] rounded-[7md]"></div>
                 <div className="z-20 relative">
-                  <h3 className="mb-2 inline-block text-base md:text-[18px] lg:text-xl font-actay text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] font-bold uppercase">
+                  <motion.h3 initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.2 + index * 0.3}}
+                  viewport={{ once: true }} className="mb-2 inline-block text-base md:text-[18px] lg:text-xl font-actay text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] font-bold uppercase">
                     {member.name}
-                  </h3>
-                  <h4 className="mb-5 text-sm md:text-[15px] lg:text-base text-[#EAEBFF] font-semibold">{member.position}</h4>
+                  </motion.h3>
+                  <motion.h4 initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.3 + index * 0.3}}
+                  viewport={{ once: true }} className="mb-5 text-sm md:text-[15px] lg:text-base text-[#EAEBFF] font-semibold">{member.position}</motion.h4>
                   <div className="flex items-center gap-[27px]">
-                    <p className="text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light">
+                    <motion.p initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 1, delay: 0.4 + index * 0.3}}
+                  viewport={{ once: true }} className="text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light">
                       {member.description}
-                    </p>
+                    </motion.p>
                     <img className="absolute top-0 right-0 w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:h-[60px] lg:w-[60px] md:static" src="/icons/link-arrow.png" alt="Link icon" />
                   </div>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
           </div>
           </div>
