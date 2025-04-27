@@ -30,9 +30,9 @@ export default function Price() {
     ]
     return (
       <div className="relative overflow-hidden">
-        <div className="absolute top-[15%] -right-[10%] w-[500px] h-[600px] opacity-60 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
+        <div className="absolute top-[20%] -right-[10%] w-[500px] h-[600px] opacity-60 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
         <Container>
-          <div className="px-[25px] md:px-20 lg:px-[120px] min-h-[1000px]">
+          <div className="px-[25px] md:px-20 lg:px-[120px] min-h-[1200px] lg:min-h-[1000px]">
               <header className="mb-[65px] lg:mb-[72px] text-center">
                 <h2 className="text-[32px] md:text-5xl lg:text-[64px] font-bold font-actay text-[#EAEBFF] uppercase">{t("title")}</h2>
                 <p className="text-base md:text-2xl lg:text-[32px] text-[#8AA2FF] uppercase">{t("description")}</p>
