@@ -39,7 +39,7 @@ export default function Price() {
               </header>
               <div className="flex flex-col md:flex-row gap-8 md:gap-6 lg:gap-5">
               {websiteTypes.map((website, index) => (
-                <div key={index} className="h-[368px] md:h-[430px] lg:h-[500px] p-[1px] lg:flex-1 bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)] rounded-lg overflow-hidden">
+                <div key={index} className="h-[368px] md:h-[430px] lg:h-[500px] p-[1px] md:flex-1 bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)] rounded-lg overflow-hidden">
                   <div className="relative h-full rounded-[7px] overflow-hidden 
                   px-7 py-10 md:px-11 md:py-12 lg:pl-[60px] lg:pt-[58px]" style={
                     website.bgImg
