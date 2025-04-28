@@ -1,7 +1,8 @@
 "use client";
 
+import ContactModal from "../modals/ContactModal";
 import Container from "@/utils/Container";
-import { Button } from "@heroui/react"
+import { Button, useDisclosure } from "@heroui/react"
 import Laptop from './common/Laptop';
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
@@ -12,6 +13,8 @@ import StarIcon from "../main/common/StarIcon";
 
 export default function Hero() {
   const t = useTranslations("HomeSection");
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  
   return (
     <div className="relative overflow-hidden">
       <div className="absolute -rotate-12 md:rotate-0 -left-[15%] md:left-0 top-[25%] lg:top-[20%] h-[30%] md:h-[40%] lg:h-[70%] w-[120%] md:w-full z-0">
@@ -34,6 +37,7 @@ export default function Hero() {
       <div className="absolute top-[5%] w-[1800px] h-[500px] bg-[#7192FF] opacity-10 blur-3xl rounded-full z-0 [transform:rotateX(55deg)_rotateZ(-40deg)]"></div>
       <div className="absolute -right-[25%] bottom-[5%] w-[800px] h-[500px] bg-[#7192FF] opacity-20 blur-3xl rounded-full z-0 [transform:rotateX(55deg)_rotateZ(40deg)]"></div>
       <div className="absolute -right-[5%] bottom-[5%] w-[600px] h-[400px] bg-black opacity-80 blur-3xl rounded-full z-0"></div>
+      <ContactModal isOpen={isOpen} onClose={onClose} />
       <Container>
         <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-10">
             <Laptop/>
@@ -58,7 +62,7 @@ export default function Hero() {
                     </span>
                   ))}
                 </p>
-                <button className="hidden lg:block w-[245px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
+                <button onClick={onOpen} className="hidden lg:block w-[245px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
                   <div className="text-[#020418] text-[14px] font-bold uppercase font-raleway">
                     {t("button")}
                   </div>
@@ -109,7 +113,7 @@ export default function Hero() {
               </div>
             </motion.div>
             <div className="flex lg:hidden justify-center pt-7">
-              <button className="w-[245px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
+              <button className="w-[310px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
                 <div className="text-[#020418] text-[14px] font-bold uppercase font-raleway">
                   {t("button")}
                 </div>

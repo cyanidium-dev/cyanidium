@@ -41,7 +41,6 @@ export default function ContactModal({ text = "Связаться" }) {
 
   return (
     <>
-      <Button onClick={onOpen}>{text}</Button>
       <Modal isOpen={isOpen} onClose={onClose} placement="center">
         <ModalContent>
           <ModalHeader>Форма связи</ModalHeader>
