@@ -115,13 +115,13 @@ export default function Team() {
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.3 + index * 0.3}}
                   viewport={{ once: true }} className="mb-5 text-sm md:text-[15px] lg:text-base text-[#EAEBFF] font-semibold">{member.position}</motion.h4>
-                  <div className="flex items-center gap-[27px] relative">
+                  <div className="flex items-center gap-[27px]">
                   <motion.p
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.4 + index * 0.3 }}
                     viewport={{ once: true }}
-                    className="text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light"
+                    className="text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light md:pr-[55px] lg:pr-[80px]"
                   >
                     {member.description}
                   </motion.p>
@@ -130,10 +130,10 @@ export default function Team() {
                     href={`https://t.me/${member.link.replace('@', '')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute top-0 right-0 md:static"
+                    className="absolute right-0 top-0 md:right-0 md:top-[58%] inline-block w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:h-[60px] lg:w-[60px] "
                   >
                     <img
-                      className="w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:h-[60px] lg:w-[60px]"
+                      className="w-full h-full object-contain"
                       src="/icons/link-arrow.png"
                       alt="Link icon"
                     />
