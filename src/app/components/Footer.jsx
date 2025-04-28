@@ -62,7 +62,7 @@ export default function Footer() {
         <div className="animate-marquee flex w-max">
           {[...Array(2)].map((_, idx) => (
             <div key={idx} className="flex">
-              {Array(10).fill("Cyanidium.dev").map((text, i) => (
+              {Array(10).fill("Code-art.dev").map((text, i) => (
                 <span
                   key={`${idx}-${i}`}
                   className="font-actay text-[50px] lg:text-[100px] xl:text-[150px] font-bold uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent mr-[100px]"
