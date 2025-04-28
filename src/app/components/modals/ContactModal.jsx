@@ -13,8 +13,7 @@ import {
 import SuccessModal from "./SuccessModal";
 import { sendMessage } from "@/utils/sendMessage";
 
-export default function ContactModal({ text = "Связаться" }) {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+export default function ContactModal({ isOpen, onClose }) {
   const [inputValue, setInputValue] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState("");
@@ -41,26 +40,21 @@ export default function ContactModal({ text = "Связаться" }) {
 
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose} placement="center">
+      <Modal className="py-[65px] px-[68px] md:py-[45px] md:px-[48px] lg:py-[25px] lg:px-[28px] rounded-lg bg-[url(/image/contact-form-bg.svg)]" isOpen={isOpen} onClose={onClose} placement="center" size="lg">
         <ModalContent>
-          <ModalHeader>Форма связи</ModalHeader>
+          <ModalHeader className="flex flex-col gap-[18px] mb-[40px]">
+            <h2 className="text-[32px]/[122%] text-[#091129] font-actay uppercase text-center">Залиште свої контакти</h2>
+            <p className="text-[14px]/[122%] text-[#091129] text-center font-light">Заповніть свої дані і ми зв’яжемося з вами, щоб обговорити вашу проблему!</p>
+          </ModalHeader>
           <ModalBody>
-            <Input
-              autoFocus
-              label="Введите сообщение"
-              variant="bordered"
-              value={inputValue}
-              onChange={(e) => setInputValue(e.target.value)}
-            />
-            {status && <p className="text-red-500 text-sm mt-2">{status}</p>}
+            <input type="text" placeholder="Ім'я" value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="text-sm text-[#091129] px-[24px] py-[13px] rounded-3xl border-[#091129] border-[2px] bg-transparent placeholder-[#091129]"/>
+            <input type="text" placeholder="Номер телефону" value={inputValue} onChange={(e) => setInputValue(e.target.value)} className="text-sm text-[#091129] px-[24px] py-[13px] rounded-3xl border-[#091129] border-[2px] bg-transparent placeholder-[#091129]"/>
+            {/* {status && <p className="text-red-500 text-sm mt-2">{status}</p>} */}
           </ModalBody>
           <ModalFooter>
-            <Button color="danger" variant="flat" onClick={onClose}>
-              Закрыть
-            </Button>
-            <Button color="primary" onClick={handleSendMessage}>
-              Отправить
-            </Button>
+            <button className="w-full py-[13.5px] text-white rounded-[24px] bg-gradient-to-r from-[#080218] to-[#2462FF]" onClick={handleSendMessage}>
+              Надіслати
+            </button>
           </ModalFooter>
         </ModalContent>
       </Modal>
