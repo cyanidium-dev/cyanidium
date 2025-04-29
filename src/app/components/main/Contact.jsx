@@ -3,9 +3,12 @@
 import Container from "@/utils/Container";
 import StarIcon from "../main/common/StarIcon";
 import { useTranslations } from "next-intl";
+import { useDisclosure } from "@heroui/react";
 import Image from "next/image"; 
+import ContactModal from "../modals/ContactModal";
 
 export default function Contact() {
+    const { isOpen, onOpen, onClose } = useDisclosure();
     const t = useTranslations("ContactSection");
     return (
       <div className="relative overflow-hidden">
@@ -25,6 +28,7 @@ export default function Contact() {
           </svg>
         </div>
         <div className="absolute left-1/2 top-[10%] lg:top-[80%] -translate-x-1/2 lg:-translate-y-1/2 w-[1480px] h-[70%] md:h-full lg:h-[1080px] bg-black opacity-90 blur-3xl rounded-full z-0"></div>
+        <ContactModal isOpen={isOpen} onClose={onClose} />
         <Container>
           <div className="relative min-h-[1200px] lg:min-h-[1000px] flex justify-center items-center">
             <div className="absolute left-1/2 top-[45%] lg:top-[80%] -translate-x-1/2 lg:-translate-y-1/2 w-[15%] lg:hidden h-[15%] lg:h-[1080px] bg-[#0F41FD] opacity-90 blur-3xl rounded-full z-0"></div>
@@ -61,7 +65,7 @@ export default function Contact() {
                   <p className="text-[#EAEBFF] text-center lg:text-left font-raleway text-[16px] md:text-[17px] lg:text-[18px] font-semibold uppercase">
                     {t("point_2")}
                   </p>
-                  <button className="w-full h-[48px] rounded-[32px] border border-[#7192FF] bg-[#EAEBFF]">
+                  <button onClick={onOpen} className="w-full h-[48px] rounded-[32px] border border-[#7192FF] bg-[#EAEBFF]">
                     <span className="text-[#020418] font-raleway text-[14px] font-bold uppercase">
                       {t("button")}
                     </span>
