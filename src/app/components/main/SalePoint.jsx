@@ -16,7 +16,7 @@ export default function SalePoint() {
 
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute top-[25%] -left-[115%] sm:-left-[30%] lg:-left-[20%] xl:-left-[10%] w-[500px] h-[500px] opacity-80 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
+      <div className="absolute top-[30%] -left-[115%] sm:-left-[30%] lg:-left-[20%] xl:-left-[10%] w-[500px] h-[400px] opacity-80 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
       <Container>
         <div className="min-h-[1000px] flex flex-col items-center justify-center">
           <motion.h1
