@@ -1,4 +1,16 @@
 {
+  "ContactModal": {
+    "title": "Leave your contact information",
+    "description": "Fill in your details and we will contact you to discuss your issue!",
+    "placeholder_1": "Name",
+    "placeholder_2": "Phone number",
+    "button": "Send"
+  },
+  "SuccessModal": {
+    "title": "Thank you for leaving your contact!",
+    "description": "You can message us on Telegram!",
+    "button": "Send a message"
+  },
   "HomeSection": {
     "title": "THE SITE DECIDES",
     "question": "Do you want your business to \n make money?",

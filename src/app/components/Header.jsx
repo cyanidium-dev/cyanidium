@@ -50,7 +50,7 @@ export default function Header() {
           <SelectLang />
         </NavbarItem>
         <NavbarItem>
-          <ContactModal />
+          {/* <ContactModal isOpen={isMenuOpen}/> */}
         </NavbarItem>
       </NavbarContent>
 

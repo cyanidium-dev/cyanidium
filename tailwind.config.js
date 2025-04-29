@@ -10,6 +10,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'max-370': { raw: '(max-width: 370)' },
+      },
       fontFamily: {
         actay: ['"Actay Wide"', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif'],
