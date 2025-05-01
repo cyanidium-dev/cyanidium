@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Modal,
   ModalContent,
@@ -13,6 +13,7 @@ import {
 import SuccessModal from "./SuccessModal";
 import { sendMessage } from "@/utils/sendMessage";
 import { useTranslations } from "next-intl";
+import IMask from "imask";
 
 export default function ContactModal({ isOpen, onClose }) {
   const t = useTranslations("ContactModal");
@@ -20,6 +21,22 @@ export default function ContactModal({ isOpen, onClose }) {
   const [phone, setPhone] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState("");
+  const phoneRef = useRef(null);
+
+  useEffect(() => {
+    if (!isOpen || !phoneRef.current) return;
+  
+    const mask = IMask(phoneRef.current, {
+      mask: "+38(000)000-00-00",
+    });
+  
+    mask.on("accept", () => {
+      setPhone(mask.value);
+    });
+  
+    return () => mask.destroy();
+  }, [isOpen]); // зависит от isOpen!
+  
 
   const handleSendMessage = async () => {
     if (!phone.trim()) {
@@ -66,7 +83,14 @@ export default function ContactModal({ isOpen, onClose }) {
           </ModalHeader>
           <ModalBody className="px-0">
             <input type="text" placeholder={t("placeholder_1")} value={name} onChange={(e) => setName(e.target.value)} className="text-[12px]/[20px] md:text-[13px]/[20px] lg:text-sm text-[#091129] px-[24px] py-[13px] rounded-3xl border-[#091129] border-[2px] bg-transparent placeholder-[#091129]"/>
-            <input type="text" placeholder={t("placeholder_2")} value={phone} onChange={(e) => setPhone(e.target.value)} className="text-sm text-[#091129] px-[24px] py-[13px] rounded-3xl border-[#091129] border-[2px] bg-transparent placeholder-[#091129]"/>
+            <input
+              ref={phoneRef}
+              type="text"
+              placeholder={t("placeholder_2")}
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              className="text-sm text-[#091129] px-[24px] py-[13px] rounded-3xl border-[#091129] border-[2px] bg-transparent placeholder-[#091129]"
+            />
             {/* {status && <p className="text-red-500 text-sm mt-2">{status}</p>} */}
           </ModalBody>
           <ModalFooter className="px-0">

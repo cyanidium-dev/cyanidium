@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useLocale } from "next-intl";
 import { useRouter } from "next/navigation";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 
 const options = [
   { value: "en", label: "EN" },
@@ -45,9 +46,14 @@ export default function SelectLang() {
     <div ref={ref} className="relative w-20 flex justify-end">
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="text-white border border-white rounded uppercase text-[16px] font-actay"
+        className="flex gap-1 items-center text-white border border-white rounded uppercase text-[16px] font-actay"
       >
         {selected}
+        {open ? (
+          <FaChevronUp className="text-white" size={12} />
+        ) : (
+          <FaChevronDown className="text-white" size={12} />
+        )}
       </button>
 
       {open && (

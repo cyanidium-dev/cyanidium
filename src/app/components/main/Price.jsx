@@ -36,7 +36,7 @@ export default function Price() {
       <div className="relative overflow-hidden">
         <div className="absolute top-[30%] -right-[10%] w-[500px] h-[400px] opacity-60 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
         <Container>
-          <div className="px-[25px] md:px-20 lg:px-[120px] min-h-[1200px] lg:min-h-[1000px]">
+          <div className="px-[25px] md:px-20 lg:px-[120px] min-h-[1200px] lg:min-h-[1000px] flex flex-col justify-center">
               <header className="mb-[65px] lg:mb-[72px] text-center">
                 <motion.h2 
                 initial="hidden"

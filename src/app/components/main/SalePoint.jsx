@@ -15,10 +15,10 @@ export default function SalePoint() {
   const [startAnimation, setStartAnimation] = useState(false);
 
   return (
-    <div className="relative overflow-hidden">
-      <div className="absolute top-[30%] -left-[115%] sm:-left-[30%] lg:-left-[20%] xl:-left-[10%] w-[500px] h-[400px] opacity-80 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
+    <div className="relative overflow-x-hidden">
+      <div className="absolute top-[30%] -left-[105%] sm:-left-[45%] lg:-left-[30%] xl:-left-[20%] w-[500px] h-[200px] opacity-80 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
       <Container>
-        <div className="min-h-[1000px] flex flex-col items-center justify-center">
+        <div className="min-h-[500px] flex flex-col items-center justify-center">
           <motion.h1
             className="whitespace-pre-wrap w-[330px] sm:w-[600px] lg:w-[950px] pb-6 text-center font-actay text-[24px] lg:text-[44px] xl:text-[64px] font-bold uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent"
             initial="hidden"

@@ -42,12 +42,12 @@ export default function Hero() {
         <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-10">
             {/* <Laptop/> */}
             {/* <img className="absolute top-[35%] md:top-[35%] left-[45%] -translate-x-1/2 max-w-[60%] md:max-w-[50%] z-[1000]" src="/image/laptop.gif" alt="Laptop Gif" /> */}
-            <div className="absolute flex flex-col items-center top-[35%] md:top[45%] lg:top-[25%] left-1/2 -translate-x-1/2 w-full h-[1100px] overflow-hidden z-[900]">
+            {/* <div className="absolute flex flex-col items-center top-[35%] md:top[45%] lg:top-[25%] left-1/2 -translate-x-1/2 w-full h-[1100px] overflow-hidden z-[900]">
               <img className="min-550:max-w-[80%] min-1024:max-w-[60%] -ml-[10%] z-30" src="/image/laptop.gif" alt="Laptop Gif" />
               <div className="-mt-[800px] min-420:-mt-[800px] min-451:-mt-[778px] min-608:-mt-[755px] min-690:-mt-[730px] md:-mt-[700px] min-771:-mt-[698px] min-788:-mt-[695px] min-840:-mt-[675px] min-890:-mt-[640px] min-1024:-mt-[650px] min-1110:-mt-[625px] min-1190:-mt-[590px] relative w-[200px] lg:w-[300px] h-[150%] bg-gradient-to-r from-transparent via-[#030415] to-transparent -rotate-90 z-100 opacity-100 overflow-hidden z-40" style={{ clipPath: "polygon(0% 0%, 60% 0%, 85% 100%, 0% 100%)"}}>
                 <div className="absolute top-[40%] -translate-y-1/2 left-[55%] md:left-[45%] lg:left-[35%] w-[400px] md:w-[800px] lg:w-[1200px] h-[100%] bg-[#6d717d] blur-2xl z-100 rounded-full"></div>
               </div>
-            </div>
+            </div> */}
             <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-0">
               {/* Левая часть */}
               <motion.div 
@@ -119,7 +119,7 @@ export default function Hero() {
               </div>
             </motion.div>
             <div className="flex lg:hidden justify-center pt-7">
-              <button className="w-[310px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
+              <button onClick={onOpen} className="w-[310px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
                 <div className="text-[#020418] text-[14px] font-bold uppercase font-raleway">
                   {t("button")}
                 </div>
