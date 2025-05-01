@@ -8,8 +8,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 
 export const metadata = {
-  title: "Cyanidium Dev. Template",
-  description: "NextJS NextUI template",
+  title: "Code-art.dev",
+  description: "Site development",
   icons: {
     icon: "/icons/favicon.ico",
   },
