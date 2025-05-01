@@ -39,14 +39,23 @@ export default function Hero() {
       <div className="absolute -right-[5%] bottom-[5%] w-[600px] h-[400px] bg-black opacity-80 blur-3xl rounded-full z-0"></div>
       <div className="absolute top-[45%] md:top-[50%] sm:left-[40%] md:left-[40%] lg:left-[45%] xl:left-[50%] left-[35%] transform -translate-x-1/2 -translate-y-1/2 z-30">
         <img
-          className="max-w-[140%] sm:max-w-[110%] md:max-w-[110%] lg:min-1024:max-w-[100%] xl:min-1024:max-w-[85%]"
+          className="relative max-w-[140%] sm:max-w-[110%] md:max-w-[110%] lg:min-1024:max-w-[100%] xl:min-1024:max-w-[85%] z-[30]"
           src="/image/laptop.gif"
           alt="Laptop Gif"
         />
+        <div className="mt-[-30px] lg:mt-[-40px] z-[10]">
+          <div 
+            className="w-[140%] sm:w-[130%] md:w-[120%] lg:w-[110%] xl:w-full h-[50px] -rotate-3 bg-white rounded-b-full blur-sm"
+            style={{
+              background: "linear-gradient(to right, transparent, rgba(255,255,255,0.7), transparent)",
+              borderRadius: "9999px"
+            }}
+          ></div>
+        </div>
       </div>
       <ContactModal isOpen={isOpen} onClose={onClose} />
       <Container>
-        <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-10">
+        <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-[50]">
             {/* <Laptop/> */}
             {/* <img className="absolute top-[35%] md:top-[35%] left-[45%] -translate-x-1/2 max-w-[60%] md:max-w-[50%] z-[1000]" src="/image/laptop.gif" alt="Laptop Gif" /> */}
             {/* <div className="absolute flex flex-col items-center top-[35%] md:top[45%] lg:top-[25%] left-1/2 -translate-x-1/2 w-full h-[1100px] overflow-hidden z-[900]">
@@ -110,7 +119,7 @@ export default function Hero() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex justify-end pt-[270px] lg:pt-0"
+              className="flex justify-end pt-[300px] lg:pt-0"
             >
               <div className="flex flex-col justify-center items-start gap-[40px] z-[10000]">
                 {[t("point_1"), t("point_2"), t("point_3")].map((text, idx) => (
