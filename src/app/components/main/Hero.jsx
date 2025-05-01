@@ -43,12 +43,11 @@ export default function Hero() {
           src="/image/laptop.gif"
           alt="Laptop Gif"
         />
-        <div className="mt-[-30px] lg:mt-[-40px] z-[10]">
+        <div className="mt-[-70px] lg:mt-[-70px] z-[10]">
           <div 
-            className="w-[140%] sm:w-[130%] md:w-[120%] lg:w-[110%] xl:w-full h-[50px] -rotate-3 bg-white rounded-b-full blur-sm"
+            className="w-[140%] sm:w-[130%] md:w-[120%] lg:w-[110%] xl:w-full h-[120px] -rotate-3 bg-white rounded-b-full blur-sm"
             style={{
-              background: "linear-gradient(to right, transparent, rgba(255,255,255,0.7), transparent)",
-              borderRadius: "9999px"
+              background: "radial-gradient(ellipse at center, rgba(255,255,255,0.9) 0%, transparent 70%)"
             }}
           ></div>
         </div>
