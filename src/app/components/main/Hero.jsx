@@ -37,6 +37,13 @@ export default function Hero() {
       <div className="absolute top-[5%] w-[1800px] h-[500px] bg-[#7192FF] opacity-10 blur-3xl rounded-full z-0 [transform:rotateX(55deg)_rotateZ(-40deg)]"></div>
       <div className="absolute -right-[25%] bottom-[5%] w-[800px] h-[500px] bg-[#7192FF] opacity-20 blur-3xl rounded-full z-0 [transform:rotateX(55deg)_rotateZ(40deg)]"></div>
       <div className="absolute -right-[5%] bottom-[5%] w-[600px] h-[400px] bg-black opacity-80 blur-3xl rounded-full z-0"></div>
+      <div className="absolute top-[45%] md:top-[50%] sm:left-[40%] md:left-[40%] lg:left-[45%] xl:left-[50%] left-[35%] transform -translate-x-1/2 -translate-y-1/2 z-30">
+        <img
+          className="max-w-[140%] sm:max-w-[110%] md:max-w-[110%] lg:min-1024:max-w-[100%] xl:min-1024:max-w-[85%]"
+          src="/image/laptop.gif"
+          alt="Laptop Gif"
+        />
+      </div>
       <ContactModal isOpen={isOpen} onClose={onClose} />
       <Container>
         <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-10">
