@@ -12,6 +12,19 @@ module.exports = {
     extend: {
       screens: {
         'max-370': { raw: '(max-width: 370)' },
+        'min-420': { raw: '(min-width: 420)' },
+        'min-451': { raw: '(min-width: 451)' },
+        'min-550': { raw: '(min-width: 550)' },
+        'min-608': { raw: '(min-width: 608)' },
+        'min-690': { raw: '(min-width: 690)' },
+        'min-771': { raw: '(min-width: 771)'},
+        'min-788': { raw: '(min-width: 788)'},
+        'min-840': { raw: '(min-width: 840)'},
+        'min-890': { raw: '(min-width: 890)'},
+        'min-1024': { raw: '(min-width: 1024)'},
+        'min-1110': { raw: '(min-width: 1110)'},
+        'min-1024': { raw: '(min-width: 1024)'},
+        'min-1190': { raw: '(min-width: 1190)'},
       },
       fontFamily: {
         actay: ['"Actay Wide"', 'sans-serif'],
