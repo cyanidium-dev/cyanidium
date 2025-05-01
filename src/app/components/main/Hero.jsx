@@ -46,7 +46,7 @@ export default function Hero() {
       </div>
       <ContactModal isOpen={isOpen} onClose={onClose} />
       <Container>
-        <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-10">
+        <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-[50]">
             {/* <Laptop/> */}
             {/* <img className="absolute top-[35%] md:top-[35%] left-[45%] -translate-x-1/2 max-w-[60%] md:max-w-[50%] z-[1000]" src="/image/laptop.gif" alt="Laptop Gif" /> */}
             {/* <div className="absolute flex flex-col items-center top-[35%] md:top[45%] lg:top-[25%] left-1/2 -translate-x-1/2 w-full h-[1100px] overflow-hidden z-[900]">
