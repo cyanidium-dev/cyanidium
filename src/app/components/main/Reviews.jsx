@@ -58,6 +58,21 @@ export default function Reviews() {
         taskHeader: t("card_4.task_header"),
         task: t("card_4.task"),
         img: '/image/ava-image-1.jpg'
+      },
+      {
+        name: t("card_5.name"),
+        position: t("card_5.position"),
+        taskHeader: t("card_5.task_header"),
+        task: t("card_5.task"),
+        description: t("card_5.description"),
+        img: '/image/ava-3.png'
+      }, 
+      {
+        name: t("card_6.name"),
+        position: t("card_6.position"),
+        taskHeader: t("card_6.task_header"),
+        task: t("card_6.task"),
+        img: '/image/ava-image-1.jpg'
       }, 
     ]
     return (
