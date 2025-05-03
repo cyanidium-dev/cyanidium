@@ -51,7 +51,6 @@ const VideoPlayer = ({ videoUrl }) => {
         ref={videoRef}
         className="w-full h-full object-cover"
         src={videoUrl}
-        muted
         loop
         playsInline
       />
