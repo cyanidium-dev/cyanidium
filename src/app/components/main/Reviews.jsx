@@ -43,7 +43,7 @@ export default function Reviews() {
         position: t("card_2.position"),
         taskHeader: t("card_2.task_header"),
         task: t("card_2.task"),
-        img: '/image/vid1.mp4'
+        img: 'https://player.vimeo.com/video/1081080701?h=1d0d2cac4c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       }, 
       {
         name: t("card_3.name"),
@@ -58,7 +58,7 @@ export default function Reviews() {
         position: t("card_4.position"),
         taskHeader: t("card_4.task_header"),
         task: t("card_4.task"),
-        img: '/image/vid2.mp4'
+        img: 'https://player.vimeo.com/video/1081080427?h=22ed5fe823&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       },
       {
         name: t("card_5.name"),
@@ -73,7 +73,7 @@ export default function Reviews() {
         position: t("card_6.position"),
         taskHeader: t("card_6.task_header"),
         task: t("card_6.task"),
-        img: '/image/vid3.mov'
+        img: 'https://player.vimeo.com/video/1081079972?h=9fcc4fa9ee&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479'
       }, 
     ]
     return (
@@ -106,7 +106,7 @@ export default function Reviews() {
               <motion.div initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 + index * 0.3}}
-              viewport={{ once: true }} key={index} className={`${review.description ? 'min-w-[333px]' : 'min-w-[255px]'} h-[400px] md:h-[435px] lg:min-w-[333px] p-[1px] rounded-lg bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)]`}>
+              viewport={{ once: true }} key={index} className={`${review.description ? 'min-w-[333px]' : 'min-w-[227px] md:min-w-[247px]'} h-[400px] md:h-[435px] p-[1px] rounded-lg bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)]`}>
                 <div className="w-full h-full flex flex-col rounded-[7px]" style={{
                       backgroundImage: "linear-gradient(164deg, #020418 52.91%, #0A157E 204.34%)",
                     }}>
@@ -127,10 +127,9 @@ export default function Reviews() {
                   <div className="px-[32px] py-10 md:py-11 lg:py-[48px] text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light break-words whitespace-normal">
                       {review.description}
                   </div>
-                </> : <>
+                </> : <div className="w-full aspect-video">
                   <VideoPlayer videoUrl={review.img}/>
-
-                </>}
+                </div>}
                 </div>
               </motion.div>
               )}      
