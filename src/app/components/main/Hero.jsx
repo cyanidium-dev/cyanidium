@@ -120,7 +120,7 @@ export default function Hero() {
               viewport={{ once: true }}
               className="flex justify-end pt-[300px] lg:pt-0"
             >
-              <div className="flex flex-col justify-center items-start gap-[40px] z-[10000]">
+              <div className="flex flex-col justify-center items-end lg:items-start gap-[40px] z-[10000]">
                 {[t("point_1"), t("point_2"), t("point_3")].map((text, idx) => (
                   <p
                     key={idx}
