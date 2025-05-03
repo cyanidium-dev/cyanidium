@@ -1,71 +1,37 @@
-import { useRef, useState, useEffect } from "react";
-import { CiPlay1 } from "react-icons/ci";
+'use client'; // если ты используешь app router
 
-const VideoPlayer = ({ videoUrl }) => {
-  const videoRef = useRef(null);
-  const [hasInteracted, setHasInteracted] = useState(false);
-  const [isPaused, setIsPaused] = useState(true);
-  const [showControls, setShowControls] = useState(false);
+import { useEffect } from 'react';
 
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setHasInteracted(true);
-    }
-  };
-
+const VideoPlayer = ({videoUrl}) => {
   useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handlePause = () => {
-      setIsPaused(true);
-      video.controls = false;
-    };
-    const handlePlayEvent = () => {
-      setIsPaused(false);
-    };
-
-    video.addEventListener("pause", handlePause);
-    video.addEventListener("play", handlePlayEvent);
+    // Подключаем Vimeo API один раз при монтировании
+    const script = document.createElement('script');
+    script.src = 'https://player.vimeo.com/api/player.js';
+    script.async = true;
+    document.body.appendChild(script);
 
     return () => {
-      video.removeEventListener("pause", handlePause);
-      video.removeEventListener("play", handlePlayEvent);
+      document.body.removeChild(script);
     };
   }, []);
 
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.controls = showControls && hasInteracted && !isPaused;
-    }
-  }, [showControls, hasInteracted, isPaused]);
-
   return (
-    <div
-      className="relative w-full h-screen overflow-hidden"
-      onMouseEnter={() => setShowControls(true)}
-      onMouseLeave={() => setShowControls(false)}
-    >
-      <video
-        ref={videoRef}
-        className="w-full h-full object-cover"
+    <div style={{ padding: '177.78% 0 0 0', position: 'relative' }}>
+      <iframe
         src={videoUrl}
-        loop
-        playsInline
-      />
-
-      {/* Показывать только если видео ещё не играло или поставлено на паузу */}
-      {(isPaused || !hasInteracted) && (
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center z-10">
-          <button
-            onClick={handlePlay}
-            className="bg-white text-black p-4 rounded-full hover:bg-gray-200 transition text-4xl"
-          >
-            <CiPlay1 className="pl-1"/>
-          </button>
-        </div>
-      )}
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+        allowFullScreen
+				className='rounded-[7px]'
+        style={{
+          position: 'absolute',
+          top: 0,
+          left: 0,
+          width: '100%',
+          height: '100%',
+        }}
+        title="Відгук Алеко"
+      ></iframe>
     </div>
   );
 };
