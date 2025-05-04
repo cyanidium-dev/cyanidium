@@ -36,7 +36,7 @@ export default function Reviews() {
         taskHeader: t("card_1.task_header"),
         task: t("card_1.task"),
         description: t("card_1.description"),
-        img: '/image/ava-1.jpg'
+        img: '/image/ava-1.webp'
       }, 
       {
         name: t("card_2.name"),
@@ -51,7 +51,7 @@ export default function Reviews() {
         taskHeader: t("card_3.task_header"),
         task: t("card_3.task"),
         description: t("card_3.description"),
-        img: '/image/ava-2.jpg'
+        img: '/image/ava-2.webp'
       }, 
       {
         name: t("card_4.name"),
@@ -66,7 +66,7 @@ export default function Reviews() {
         taskHeader: t("card_5.task_header"),
         task: t("card_5.task"),
         description: t("card_5.description"),
-        img: '/image/ava-3.png'
+        img: '/image/ava-3.webp'
       }, 
       {
         name: t("card_6.name"),
@@ -83,7 +83,7 @@ export default function Reviews() {
             <motion.h2 initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
-            onViewportEnter={() => setStartAnimation(true)}  className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-center">
+            onViewportEnter={() => setStartAnimation(true)}  className="font-actay lg:max-w-[1000px] inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-center">
               {words.map((word, wordIndex) => (
               <span key={wordIndex} className="inline-block mr-2">
                 {word.split("").map((letter, letterIndex) => (
@@ -112,19 +112,19 @@ export default function Reviews() {
                     }}>
                 {index % 2 === 0 ? 
                 <>
-                                <header className="flex gap-8 items-center p-[28px] md:p-[30px] lg:p-[32px]">
+                                <header className="font-raleway flex gap-8 items-center p-[28px] md:p-[30px] lg:p-[32px]">
                   {index % 2 === 0 && <img className="h-[74px] w-[74px] rounded-[50%]" src={review.img} alt="Avatar"/>}
                   <div>
                     <p className="mb-2 text-[20px] font-bold text-[#FFFFFF] uppercase">{review.name}</p>
                     <p className="text-[14px] text-[#FFFFFF]">{review.position}</p>
                   </div>
                 </header>
-                  <div className="py-[22px] pl-[32px] pr-[32px] lg:pr-[60px] relative bg-[#EAEBFF]">
+                  <div className="font-raleway py-[22px] pl-[32px] pr-[32px] lg:pr-[60px] relative bg-[#EAEBFF]">
                     <h3 className="mb-2 text-[16px] text-black font-semibold uppercase">{review.taskHeader}</h3>
                     <p className="text-xs md:text-[13px] lg:text-sm text-[#020418]">{review.task}</p>
                     <img src="/icons/star.png" className="absolute top-3 right-3" alt="Star icon" />
                   </div>
-                  <div className="px-[32px] py-10 md:py-11 lg:py-[48px] text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light break-words whitespace-normal">
+                  <div className="font-raleway px-[32px] py-10 md:py-11 lg:py-[48px] text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light break-words whitespace-normal">
                       {review.description}
                   </div>
                 </> : <div className="w-full aspect-video">

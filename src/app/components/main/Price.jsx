@@ -59,7 +59,7 @@ export default function Price() {
               </span>
             ))}
             </motion.h2>
-                <p className="text-base md:text-2xl lg:text-[32px] text-[#8AA2FF] uppercase">{t("description")}</p>
+                <p className="mt-2 font-raleway text-base md:text-2xl lg:text-[32px] text-[#8AA2FF] uppercase">{t("description")}</p>
               </header>
               <div className="flex flex-col md:flex-row gap-8 md:gap-6 lg:gap-5">
               {websiteTypes.map((website, index) => (
@@ -90,10 +90,10 @@ export default function Price() {
                       <motion.h3 initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.2 + index * 0.3}}
-                  viewport={{ once: true }} className="mb-[14px] font-actay text-2xl md:text-[30px]lg:text-4xl uppercase" style={{ color: website.textColor }}>
+                  viewport={{ once: true }} className="mb-[14px] font-actay text-2xl md:text-[30px] lg:text-4xl uppercase" style={{ color: website.textColor }}>
                         {website.name}
                       </motion.h3>
-                      <p className="max-w-[150px] md:max-w-[70%] lg:max-w-full mb-10 md:mb-[35px] lg:mb-[30px] text-sm md:text-[16px] lg:text-xl" style={{ color: website.textColor }}>
+                      <p className="font-raleway max-w-[150px] md:max-w-[70%] lg:max-w-full mb-10 md:mb-[35px] lg:mb-[30px] text-sm md:text-[16px] lg:text-xl" style={{ color: website.textColor }}>
                         {website.description}
                       </p>
                       <strong className={`inline-block text-[40px] md:text-[42px] lg:text-[52px] text-transparent bg-clip-text bg-gradient-to-b ${website.gradient} font-actay`}>
