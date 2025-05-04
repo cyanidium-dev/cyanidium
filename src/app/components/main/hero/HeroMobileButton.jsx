@@ -8,7 +8,7 @@ export default function HeroMobileButton({ onOpen, label }) {
       <button
         onClick={onOpen}
         className="w-[310px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF] overflow-hidden text-[#020418] text-[14px] font-bold uppercase font-raleway"
-        style={{ backgroundImage: "url('/image/buttonbg-1.png')" }}
+        style={{ backgroundImage: "url('/image/buttonbg-2.png')" }}
       >
           {label}
       </button>
