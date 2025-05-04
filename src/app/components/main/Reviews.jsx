@@ -78,7 +78,7 @@ export default function Reviews() {
     ]
     return (
       <Container>
-        <div className="min-h-[1000px]">
+        <div className="min-h-[700px] sm:min-h-[800px]">
           <header className="mb-[47px] px-[25px] md:px-20 lg:pl-[120px]">
             <motion.h2 initial="hidden"
             whileInView="visible"
@@ -106,7 +106,7 @@ export default function Reviews() {
               <motion.div initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 + index * 0.3}}
-              viewport={{ once: true }} key={index} className={`${review.description ? 'min-w-[333px]' : 'min-w-[227px] md:min-w-[247px]'} h-[400px] md:h-[435px] p-[1px] rounded-lg bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)]`}>
+              viewport={{ once: true }} key={index} className={`${review.description ? 'min-w-[333px]' : 'min-w-[227px] md:min-w-[248px]'} h-[400px] md:h-[435px] p-[1px] rounded-lg bg-[radial-gradient(ellipse_at_top_left,_#F0EEFF,_#6D65A3,_#1A1033)]`}>
                 <div className="w-full h-full flex flex-col rounded-[7px]" style={{
                       backgroundImage: "linear-gradient(164deg, #020418 52.91%, #0A157E 204.34%)",
                     }}>

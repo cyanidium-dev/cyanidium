@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { useInView } from "framer-motion";
+import Image from "next/image"; 
 
 export default function SalePoint() {
   const t = useTranslations("SalePointSection");
@@ -15,8 +16,23 @@ export default function SalePoint() {
   const [startAnimation, setStartAnimation] = useState(false);
 
   return (
-    <div className="relative overflow-x-hidden">
-      <div className="absolute top-[30%] -left-[105%] sm:-left-[45%] lg:-left-[30%] xl:-left-[20%] w-[500px] h-[200px] opacity-80 blur-[280px] rounded-full z-0 bg-gradient-to-r from-[#0F41FD] via-[#901090] to-[#5c0a5c] animate-gradientMove"></div>
+    <div className="relative">
+      <div className="hidden md:block absolute h-[1800px] w-[768px] top-1/2 -translate-y-1/2">
+        <Image
+          src="/image/blue-gradient.png"
+          alt="Gradient"
+          fill
+          className=""
+        />
+      </div>
+      <div className="block md:hidden absolute h-[2000px] w-full top-[55%] -translate-y-1/2">
+        <Image
+          src="/image/salepointbg.png"
+          alt="Gradient"
+          fill
+          className=""
+        />
+      </div>      
       <Container>
         <div className="min-h-[500px] flex flex-col items-center justify-center">
           <motion.h1

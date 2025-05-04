@@ -36,7 +36,7 @@ export default function Features() {
       <div className="hidden lg:block absolute lg:top-[5%] xl:top-[10%] lg:-right-[25%] xl:-right-[15%] w-[500px] h-[500px] bg-[#DBE3FF] opacity-15 blur-[280px] rounded-full z-0"></div>
       <div className="hidden lg:block absolute lg:top-[5%] xl:top-[10%] lg:-left-[25%] xl:-left-[15%] w-[500px] h-[500px] bg-[#DBE3FF] opacity-15 blur-[280px] rounded-full z-0"></div>
       <Container>
-        <div className="min-h-[2500px] lg:min-h-[1200px] flex flex-col justify-center">
+        <div className="min-h-[2500px] lg:min-h-[1000px] flex flex-col justify-start">
           <h1 className="pb-[90px] text-center font-actay text-[32px] lg:text-[44px] xl:text-[64px] font-bold uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent">
             {t("title").split("\n").map((line, i) => (
               <span key={i}>

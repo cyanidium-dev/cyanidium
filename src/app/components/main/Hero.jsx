@@ -1,14 +1,16 @@
 "use client";
 
-import ContactModal from "../modals/ContactModal";
+import dynamic from 'next/dynamic';
+const ContactModal = dynamic(() => import("../modals/ContactModal"), {
+  ssr: false,
+});
 import Container from "@/utils/Container";
-import { Button, useDisclosure } from "@heroui/react"
-import Laptop from './common/Laptop';
+import { useDisclosure } from "@heroui/react"
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 import Image from "next/image"; 
-import SelectLang from "../main/common/SelectLang";
+const SelectLang = dynamic(() => import('../main/common/SelectLang'), { ssr: false });
 import StarIcon from "../main/common/StarIcon";
 
 export default function Hero() {
@@ -17,52 +19,39 @@ export default function Hero() {
   
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute -rotate-12 md:rotate-0 -left-[15%] md:left-0 top-[25%] lg:top-[20%] h-[30%] md:h-[40%] lg:h-[70%] w-[120%] md:w-full z-0">
-        <Image
-          src="/image/herobg.png"
-          alt="Phone"
-          fill
-          className=""
-        />
-      </div>
-      <div className="absolute left-[55%] md:left-1/2 top-[300px] -translate-x-[100%] z-0">
-        <Image
-          src="/image/planet.png"
-          alt="Phone"
-          width={325}
-          height={325}
-          className=""
-        />
-      </div>
-      <div className="absolute top-[5%] w-[1800px] h-[500px] bg-[#7192FF] opacity-10 blur-3xl rounded-full z-0 [transform:rotateX(55deg)_rotateZ(-40deg)]"></div>
-      <div className="absolute -right-[25%] bottom-[5%] w-[800px] h-[500px] bg-[#7192FF] opacity-20 blur-3xl rounded-full z-0 [transform:rotateX(55deg)_rotateZ(40deg)]"></div>
-      <div className="absolute -right-[5%] bottom-[5%] w-[600px] h-[400px] bg-black opacity-80 blur-3xl rounded-full z-0"></div>
-      <div className="absolute top-[45%] md:top-[50%] sm:left-[40%] md:left-[40%] lg:left-[45%] xl:left-[50%] left-[35%] transform -translate-x-1/2 -translate-y-1/2 z-30">
-        <img
-          className="relative max-w-[140%] sm:max-w-[110%] md:max-w-[110%] lg:min-1024:max-w-[100%] xl:min-1024:max-w-[85%] z-[30]"
-          src="/image/laptop.gif"
-          alt="Laptop Gif"
-        />
-        <div className="mt-[-70px] lg:mt-[-70px] z-[10]">
-          <div 
-            className="w-[140%] sm:w-[130%] md:w-[120%] lg:w-[110%] xl:w-full h-[120px] -rotate-3 bg-white rounded-b-full blur-sm"
-            style={{
-              background: "radial-gradient(ellipse at center, rgba(255,255,255,0.9) 0%, transparent 70%)"
-            }}
-          ></div>
+      <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-[1280px] z-0">
+        <div className="relative w-full">
+          <Image
+            className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px]"
+            width={855}
+            height={426.5}
+            src="/image/laptop.gif"
+            alt="Laptop Gif"
+          />
         </div>
+        <Image
+          src="/image/herobg-2.png"
+          alt="Hero Background Desktop"
+          fill
+          className="object-cover"
+        />
       </div>
+
+      <div className="block md:hidden absolute left-1/2 transform -translate-x-1/2 h-full w-full z-0">
+        <Image
+          src="/image/herobg-mobile.png"
+          alt="Hero Background Mobile"
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="block absolute h-full w-[700px] left-[200px] top-[66.7%] -translate-y-1/2 z-[30]">
+        
+      </div>
+
       <ContactModal isOpen={isOpen} onClose={onClose} />
       <Container>
-        <div className="relative min-h-[1000px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-[50]">
-            {/* <Laptop/> */}
-            {/* <img className="absolute top-[35%] md:top-[35%] left-[45%] -translate-x-1/2 max-w-[60%] md:max-w-[50%] z-[1000]" src="/image/laptop.gif" alt="Laptop Gif" /> */}
-            {/* <div className="absolute flex flex-col items-center top-[35%] md:top[45%] lg:top-[25%] left-1/2 -translate-x-1/2 w-full h-[1100px] overflow-hidden z-[900]">
-              <img className="min-550:max-w-[80%] min-1024:max-w-[60%] -ml-[10%] z-30" src="/image/laptop.gif" alt="Laptop Gif" />
-              <div className="-mt-[800px] min-420:-mt-[800px] min-451:-mt-[778px] min-608:-mt-[755px] min-690:-mt-[730px] md:-mt-[700px] min-771:-mt-[698px] min-788:-mt-[695px] min-840:-mt-[675px] min-890:-mt-[640px] min-1024:-mt-[650px] min-1110:-mt-[625px] min-1190:-mt-[590px] relative w-[200px] lg:w-[300px] h-[150%] bg-gradient-to-r from-transparent via-[#030415] to-transparent -rotate-90 z-100 opacity-100 overflow-hidden z-40" style={{ clipPath: "polygon(0% 0%, 60% 0%, 85% 100%, 0% 100%)"}}>
-                <div className="absolute top-[40%] -translate-y-1/2 left-[55%] md:left-[45%] lg:left-[35%] w-[400px] md:w-[800px] lg:w-[1200px] h-[100%] bg-[#6d717d] blur-2xl z-100 rounded-full"></div>
-              </div>
-            </div> */}
+        <div className="relative min-h-[900px] md:min-h-[1330px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-[50]">
             <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-0">
               {/* Левая часть */}
               <motion.div 
@@ -72,7 +61,7 @@ export default function Hero() {
                 viewport={{ once: true }}
                 className="order-2 lg:order-1 flex flex-col items-center lg:items-start lg:justify-between"
               >
-                <h1 className="text-[#EAEBFF] font-bold text-[32px] md:text-[44px] lg:text-[64px] uppercase mb-4 font-actay">
+                <h1 className="text-[#EAEBFF] font-bold text-[32px] md:text-[44px] lg:text-[64px] uppercase mb-2 font-actay">
                   {t("title")}
                 </h1>
                 <p className="text-[#EAEBFF] text-[14px] md:text-[16px] text-center lg:text-left lg:text-[20px] mb-[38px] font-raleway">
@@ -83,7 +72,15 @@ export default function Hero() {
                     </span>
                   ))}
                 </p>
-                <button onClick={onOpen} className="hidden lg:block w-[245px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
+                <button onClick={onOpen} className="relative hidden lg:block w-[245px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF] overflow-hidden">
+                  <div className="absolute left-[48%] top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full z-0">
+                    <Image
+                      src="/image/buttonbg-2.png"
+                      alt="Hero Background Mobile"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
                   <div className="text-[#020418] text-[14px] font-bold uppercase font-raleway">
                     {t("button")}
                   </div>
@@ -95,7 +92,7 @@ export default function Hero() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="order-1 lg:order-2 flex pt-[12px] flex-col lg:flex-row items-center lg:items-start gap-8"
+                className="order-1 lg:order-2 flex pt-[12px] flex-col lg:flex-row items-center lg:items-start gap-7"
               >
                 <div className="order-2 lg:order-1">
                   <StarIcon width={48} height={48}/>
@@ -118,7 +115,7 @@ export default function Hero() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
               viewport={{ once: true }}
-              className="flex justify-end pt-[300px] lg:pt-0"
+              className="flex justify-end pt-[180px] lg:pt-0"
             >
               <div className="flex flex-col justify-center items-end lg:items-start gap-[40px] z-[10000]">
                 {[t("point_1"), t("point_2"), t("point_3")].map((text, idx) => (
@@ -134,7 +131,15 @@ export default function Hero() {
               </div>
             </motion.div>
             <div className="flex lg:hidden justify-center pt-7">
-              <button onClick={onOpen} className="w-[310px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF]">
+              <button onClick={onOpen} className="relative w-[310px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF] overflow-hidden">
+                <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full z-0">
+                  <Image
+                    src="/image/buttonbg-1.png"
+                    alt="Hero Background Mobile"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <div className="text-[#020418] text-[14px] font-bold uppercase font-raleway">
                   {t("button")}
                 </div>

@@ -1,5 +1,3 @@
-"use client";
-
 import Container from "@/utils/Container";
 
 import { useTranslations } from "next-intl";
@@ -86,7 +84,7 @@ export default function Portfolio() {
                 </span>
               </button> */}
             </div>
-            <div className="flex flex-wrap justify-between gap-4 xl:gap-9">
+            <div className="flex flex-wrap gap-4 xl:gap-9">
               {sections.map((s) => ( //поменять на ссылку
                 <div key={s.section} className="text-[#EAEBFF] font-raleway text-[12px] lg:text-[16px] xl:text-[18px] font-normal">
                   <p>
