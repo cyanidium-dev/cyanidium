@@ -4,10 +4,31 @@ export default function HeroBackground() {
   return (
     <>
       {/* Desktop */}
-      <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full lg:w-full z-0">
+      <div className="hidden xl:block absolute left-1/2 transform -translate-x-1/2 h-[1000px] lg:w-[1920px] z-0">
         <div className="relative w-full">
           <Image
-            className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px] lg:w-[855px] xl:w-[825px]"
+            className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px] xl:w-[930px]"
+            width={855}
+            height={426.5}
+            src="/image/laptop2.gif"
+            alt="Laptop Gif"
+            loading="lazy"
+          />
+        </div>
+        <Image
+          src="/image/herobgxl.webp"
+          alt="Hero Background Desktop"
+          fill
+          className="object-cover"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Desktop */}
+      <div className="hidden lg:block xl:hidden absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full lg:w-full z-0">
+        <div className="relative w-full">
+          <Image
+            className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px] lg:w-[855px]"
             width={855}
             height={426.5}
             src="/image/laptop2.gif"
