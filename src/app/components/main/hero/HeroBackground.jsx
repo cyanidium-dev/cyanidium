@@ -19,7 +19,6 @@ export default function HeroBackground() {
           alt="Hero Background Desktop"
           fill
           className="object-cover"
-          loading="lazy"
         />
       </div>
 
@@ -29,7 +28,6 @@ export default function HeroBackground() {
           alt="Hero Background Mobile"
           fill
           className="object-cover"
-          loading="lazy"
         />
       </div>
 
