@@ -35,18 +35,16 @@ export default function Team() {
     
     return (
       <div className="relative overflow-hidden">
-        <div className="absolute top-[10%] -rotate-12 left-1/2 transform -translate-x-1/2 w-[70%] h-[800px] bg-[#0F41FD] opacity-30 blur-3xl rounded-full z-10"></div>
-        <div className="absolute top-[10%] -rotate-12 left-1/2 transform -translate-x-1/2 w-[50%] h-[800px] bg-[#020418] opacity-90 blur-3xl rounded-full z-10"></div>
-        <div className="absolute left-1/2 transform -translate-x-1/2 rotate-12 h-[70%] w-[120%] z-0">
+        <div className="hidden sm:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full z-0">
           <Image
-            src="/image/herobg.png"
+            src="/image/teambg.png"
             alt="Phone"
             fill
             className=""
           />
           </div>
         <Container>
-        <div className="relative z-10 px-[25px] md:px-20 lg:px-[120px] min-h-[1300px] md:min-h-[1350px] lg:min-h-[1200px]">
+        <div className="relative z-10 px-[25px] md:px-20 lg:px-[120px] min-h-[1300px] md:min-h-[1350px] lg:min-h-[1200px] flex flex-col justify-center">
           <header className="mb-10 md:mb-[47px] lg:mb-[53px] flex flex-col lg:flex-row gap-5 lg:gap-[111px] align-start">
             <motion.h2 initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}

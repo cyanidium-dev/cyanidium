@@ -1,4 +1,4 @@
-import { Raleway } from "next/font/google";
+import { Raleway, Montserrat } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
@@ -10,6 +10,13 @@ import { getMessages } from "next-intl/server";
 const raleway = Raleway({
   subsets: ["latin"],
   weight: ["400", "700"],
+  variable: "--font-raleway",
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], 
+  variable: "--font-montserrat", 
 });
 
 export async function generateMetadata({ params }) {
@@ -31,7 +38,7 @@ export default async function RootLayout({ children, params }) {
   const messages = await getMessages({ locale, path: "messages" });
 
   return (
-    <html lang={locale} className={raleway.className}>
+    <html lang={locale} className={`${raleway.variable} ${montserrat.variable}`}>
       <body>
         <NextIntlClientProvider messages={messages}>
           <Providers>

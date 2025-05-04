@@ -71,12 +71,12 @@ export default function Footer() {
               <input
                 ref={inputRef}
                 type="text"
-                placeholder="Phone"
+                placeholder={t("Phone")}
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
                 className="px-[16px] py-2 w-full text-[#6B6E9A] font-raleway text-[12px] font-normal leading-[20px] bg-transparent"
               />
-              <button onClick={handleSend} className="flex w-[92px] h-full px-[42px] py-[10px] justify-center items-center gap-[10px] shrink-0 rounded-[2px] bg-[linear-gradient(111deg,_#EAEBFF_37.36%,_#6A8FFF_182.03%)]">
+              <button onClick={handleSend} className="flex text-[14px] w-[88px] h-full justify-center items-center gap-[10px] shrink-0 rounded-[2px] bg-[linear-gradient(111deg,_#EAEBFF_37.36%,_#6A8FFF_182.03%)]">
                 {t("Send")}
               </button>
             </div>
@@ -86,10 +86,10 @@ export default function Footer() {
           <div className="flex flex-col xl:flex-row justify-between xl:justify-start gap-[70px]">
             <div className="flex flex-col gap-4">
               <h3 className="text-white font-actay text-[16px] font-bold leading-[103.301%] uppercase">{t("Contacts")}</h3>
-              <ul className="flex flex-col gap-3 md:gap-3 text-sm uppercase font-semibold items-start">
-                  <li className="text-white text-center font-raleway text-[14px] font-light leading-[18px] uppercase">+380-97-006-87-07</li>
-                  <li className="text-white text-center font-raleway text-[14px] font-light leading-[18px] uppercase">cyanidiumdev@gmail.com</li>
-              </ul>
+              <div className="flex flex-col gap-3 md:gap-3 uppercase font-semibold items-start">
+                  <span className="text-white text-center font-montserrat text-[14px] font-normal leading-[18px] uppercase">+380-97-006-87-07</span>
+                  <span className="text-white text-center font-raleway text-[14px] font-light leading-[18px] uppercase">cyanidiumdev@gmail.com</span>
+              </div>
             </div>
             <div className="flex flex-col gap-4">
               <h3 className="text-white font-actay text-[16px] font-bold leading-[103.301%] uppercase">{t("Media")}</h3>  

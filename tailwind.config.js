@@ -27,7 +27,8 @@ module.exports = {
       },
       fontFamily: {
         actay: ['"Actay Wide"', 'sans-serif'],
-        raleway: ['Raleway', 'sans-serif'],
+        raleway: ['var(--font-raleway)', 'sans-serif'],
+        montserrat: ['var(--font-montserrat)', 'sans-serif'],
       },
       colors: {
         background: "var(--background)",

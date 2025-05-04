@@ -50,7 +50,7 @@ export default function Contact() {
                   </span>
                 ))}
               </h2>
-              <div className="flex flex-col items-center lg:flex-row gap-[60vh] lg:justify-between">
+              <div className="flex flex-col items-center lg:flex-row gap-[60vh] lg:gap-0 lg:justify-between">
                 <div className="flex flex-col gap-10">
                   <p className="text-[#EAEBFF] font-raleway text-[14px] md:text-[16px] lg:text-[18px] font-light text-center lg:text-left max-w-[300px] lg:max-w-[230px]">
                     {t("point_1")}
@@ -65,7 +65,15 @@ export default function Contact() {
                   <p className="text-[#EAEBFF] text-center lg:text-left font-raleway text-[16px] md:text-[17px] lg:text-[18px] font-semibold uppercase">
                     {t("point_2")}
                   </p>
-                  <button onClick={onOpen} className="w-full h-[48px] rounded-[32px] border border-[#7192FF] bg-[#EAEBFF] z-40">
+                  <button onClick={onOpen} className="relative w-full h-[48px] rounded-[32px] border border-[#7192FF] bg-[#EAEBFF] z-40 overflow-hidden">
+                    <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full z-0">
+                      <Image
+                        src="/image/buttonbg-1.png"
+                        alt="Hero Background Mobile"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                     <span className="text-[#020418] font-raleway text-[14px] font-bold uppercase">
                       {t("button")}
                     </span>
