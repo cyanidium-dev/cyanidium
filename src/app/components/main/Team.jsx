@@ -10,10 +10,7 @@ export default function Team() {
   
     const [hoveredIndex, setHoveredIndex] = useState(null);
     const t = useTranslations("TeamSection");
-    const title = t("title");
 
-    const words = title.split(" ");
-      const [startAnimation, setStartAnimation] = useState(false);
     const teamMembers = [
       {
         name: t("developer_1.name"),
@@ -45,17 +42,17 @@ export default function Team() {
           </div>
         <Container>
         <div className="relative z-10 px-[25px] md:px-20 lg:px-[120px] min-h-[1300px] md:min-h-[1350px] lg:min-h-[1200px] flex flex-col justify-center">
-          <header className="mb-10 md:mb-[47px] lg:mb-[53px] flex flex-col lg:flex-row gap-5 lg:gap-[111px] align-start">
+          <header className="mb-10 md:mb-[47px] lg:mb-[53px] flex flex-col lg:flex-row lg:items-center gap-5 lg:gap-[111px] align-start">
             <motion.h2 initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.3}}
-                  viewport={{ once: true }} className="inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">
+                  viewport={{ once: true }} className="font-actay inline-block text-[32px] md:text-5xl lg:text-[64px] font-bold uppercase text-transparent bg-clip-text bg-gradient-to-b from-[#EAEBFF] to-[#6A8FFF] text-nowrap">
                   {t('title')}
             </motion.h2>
             <motion.p initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.3}}
-                  viewport={{ once: true }} className="mt-[9px] mb-[9px] text-[#EAEBFF] text-[14px] md:text-base lg:text-[18px]">{t("description")}</motion.p>
+                  viewport={{ once: true }} className="font-raleway mt-[9px] mb-[9px] text-[#EAEBFF] text-[14px] md:text-base lg:text-[18px]">{t("description")}</motion.p>
           </header>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {teamMembers.map((member, index) => (
@@ -84,7 +81,7 @@ export default function Team() {
                           .map((text, i) => (
                             <span
                               key={`${idx}-${i}`}
-                              className="inline-block text-xl md:text-[28px] lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#080218] to-[#2462FF] font-bold mr-4 uppercase"
+                              className="font-raleway inline-block text-xl md:text-[28px] lg:text-4xl text-transparent bg-clip-text bg-gradient-to-r from-[#080218] to-[#2462FF] font-bold mr-4 uppercase"
                             >
                               {text}
                             </span>
@@ -112,14 +109,14 @@ export default function Team() {
                   <motion.h4 initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 1, delay: 0.3 + index * 0.3}}
-                  viewport={{ once: true }} className="mb-5 text-sm md:text-[15px] lg:text-base text-[#EAEBFF] font-semibold">{member.position}</motion.h4>
+                  viewport={{ once: true }} className="font-raleway mb-5 text-sm md:text-[15px] lg:text-base text-[#EAEBFF] font-semibold">{member.position}</motion.h4>
                   <div className="flex items-center gap-[27px]">
                   <motion.p
                     initial={{ opacity: 0, x: -50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 1, delay: 0.4 + index * 0.3 }}
                     viewport={{ once: true }}
-                    className="text-xs md:text-[13px] lg:text-[14px] text-[#EAEBFF] font-light md:pr-[55px] lg:pr-[80px]"
+                    className="font-raleway text-xs/[18px] md:text-[13px]/[18px] lg:text-[14px]/[18px] text-[#EAEBFF] font-light md:pr-[55px] lg:pr-[80px]"
                   >
                     {member.description}
                   </motion.p>
@@ -128,7 +125,7 @@ export default function Team() {
                     href={`https://t.me/${member.link.replace('@', '')}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="absolute right-0 top-0 md:right-0 md:top-[58%] inline-block w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:h-[60px] lg:w-[60px] "
+                    className="absolute right-0 top-0 md:right-0 md:top-[65%] inline-block w-[44px] h-[44px] md:w-[52px] md:h-[52px] lg:h-[60px] lg:w-[60px] "
                   >
                     <img
                       className="w-full h-full object-contain"
