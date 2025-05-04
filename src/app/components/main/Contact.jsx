@@ -30,7 +30,7 @@ export default function Contact() {
         <div className="absolute left-1/2 top-[10%] lg:top-[70%] -translate-x-1/2 lg:-translate-y-1/2 w-[1480px] h-[70%] md:h-full lg:h-[1280px] bg-black opacity-90 blur-3xl rounded-full z-0 pointer-events-none"></div>
         <ContactModal isOpen={isOpen} onClose={onClose} />
         <Container>
-          <div className="relative min-h-[1250px] lg:min-h-[120px] flex justify-center items-center">
+          <div className="relative min-h-[1250px] lg:min-h-[1300px] flex justify-center items-center">
             <div className="absolute left-1/2 top-[45%] lg:top-[80%] -translate-x-1/2 lg:-translate-y-1/2 w-[15%] lg:hidden h-[15%] lg:h-[1080px] bg-[#0F41FD] opacity-90 blur-3xl rounded-full z-0"></div>
             <div className="absolute top-[60%] -translate-y-[60%] left-1/2 -translate-x-1/2 lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 rotate-[4deg] w-[650px] lg:w-[775px] h-auto z-0">
               <Image
