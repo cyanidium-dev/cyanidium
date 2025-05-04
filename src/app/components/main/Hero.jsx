@@ -50,7 +50,7 @@ export default function Hero() {
             </div>
 
             {/* Средняя секция */}
-            {/* <motion.div
+            <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -58,7 +58,7 @@ export default function Hero() {
               className="flex justify-end pt-[180px] lg:pt-0"
             >
               <HeroPoints />
-            </motion.div> */}
+            </motion.div>
             <HeroMobileButton onOpen={onOpen} label={t("button")} />
         </div>
       </Container>
