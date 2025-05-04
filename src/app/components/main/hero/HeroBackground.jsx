@@ -3,6 +3,7 @@ import Image from "next/image";
 export default function HeroBackground() {
   return (
     <>
+      {/* Desktop */}
       <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full lg:w-full z-0">
         <div className="relative w-full">
           <Image
@@ -23,16 +24,21 @@ export default function HeroBackground() {
         />
       </div>
 
+      {/* Mobile */}
       <div className="block lg:hidden absolute left-1/2 transform -translate-x-1/2 h-full w-full z-0">
         <div className="relative w-full top-[17.5%] sm:top-[8.5%] md:top-[10%]">
-          <Image
+          <video
             className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[0px] w-[350px] sm:w-[500px] md:w-[640px]"
-            width={855}
-            height={426.5}
-            src="/image/laptop2.gif"
-            alt="Laptop Gif"
-            loading="lazy"
-          />
+            width="855"
+            height="426.5"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src="/image/laptop2.webm" type="video/webm" />
+            Ваш браузер не поддерживает видео.
+          </video>
         </div>
         <Image
           src="/image/herobg-mobile.png"
@@ -43,6 +49,7 @@ export default function HeroBackground() {
         />
       </div>
 
+      {/* Overlay (если используется) */}
       <div className="block absolute h-full w-[700px] left-[200px] top-[66.7%] -translate-y-1/2 z-[30]" />
     </>
   );
