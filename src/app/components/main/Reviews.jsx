@@ -78,7 +78,7 @@ export default function Reviews() {
     ]
     return (
       <Container>
-        <div className="min-h-[1000px]">
+        <div className="min-h-[700px] sm:min-h-[800px]">
           <header className="mb-[47px] px-[25px] md:px-20 lg:pl-[120px]">
             <motion.h2 initial="hidden"
             whileInView="visible"

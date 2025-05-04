@@ -18,6 +18,13 @@ export default function Hero() {
   return (
     <div className="relative overflow-hidden">
       <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-[1280px] z-0">
+        <div className="relative w-full">
+          <img
+            className="absolute h-[426.5px] w-[800px] z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px]"
+            src="/image/laptop.gif"
+            alt="Laptop Gif"
+          />
+        </div>
         <Image
           src="/image/herobg-2.png"
           alt="Hero Background Desktop"
@@ -34,12 +41,8 @@ export default function Hero() {
           className="object-cover"
         />
       </div>
-      <div className="block absolute h-full w-[700px] left-[17%] top-[66.7%] -translate-y-1/2 z-[30]">
-        <img
-          className=""
-          src="/image/laptop.gif"
-          alt="Laptop Gif"
-        />
+      <div className="block absolute h-full w-[700px] left-[200px] top-[66.7%] -translate-y-1/2 z-[30]">
+        
       </div>
 
       <ContactModal isOpen={isOpen} onClose={onClose} />
