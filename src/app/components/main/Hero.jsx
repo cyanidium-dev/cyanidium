@@ -1,13 +1,9 @@
 "use client"
 
-import dynamic from 'next/dynamic';
-import StarIcon from "../main/common/StarIcon";
 import Container from "@/utils/Container";
 import { useDisclosure } from "@heroui/react"
 import { useTranslations } from "next-intl";
-import { motion } from "framer-motion";
-
-import Image from "next/image"; 
+import { motion } from "framer-motion"; 
 
 import HeroLeft from "./hero/HeroLeft";
 import HeroRight from "./hero/HeroRight";
