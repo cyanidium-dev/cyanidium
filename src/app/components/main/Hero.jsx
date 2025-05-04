@@ -31,6 +31,7 @@ export default function Hero() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
                 viewport={{ once: true }}
+                className="order-2 lg:order-1"
               >
                 <HeroLeft onOpen={onOpen} />
               </motion.div>
@@ -40,6 +41,7 @@ export default function Hero() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
                 viewport={{ once: true }}
+                className="order-1 lg:order-2 "
               >
                 <HeroRight />
               </motion.div>
