@@ -14,7 +14,7 @@ export default function HeroBackground() {
           />
         </div>
         <Image
-          src="/image/herobg-2.png"
+          src="/image/herobg1.png"
           alt="Hero Background Desktop"
           fill
           className="object-cover"
