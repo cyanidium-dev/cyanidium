@@ -75,7 +75,7 @@ export default function ContactModal({ isOpen, onClose }) {
 
   return (
     <>
-      <Modal className="mx-[25px] py-[48px] px-[18px] md:py-[57px] md:px-[43px] lg:py-[65px] lg:px-[68px] rounded-lg bg-[url(/image/contact-form-bg.svg)]" isOpen={isOpen} onClose={onClose} placement="center" size="lg" hideCloseButton={true}>
+      <Modal className="mx-[25px] py-[48px] px-[18px] md:py-[57px] md:px-[43px] lg:py-[65px] lg:px-[68px] rounded-lg bg-[url(/image/contact-form-bg1.svg)]" isOpen={isOpen} onClose={onClose} placement="center" size="lg" hideCloseButton={true}>
         <ModalContent>
           <ModalHeader className="flex flex-col gap-[18px] mb-8 md:mb-9 lg:mb-10">
             <h2 className="text-[24px]/[122%] md:text-[28px]/[122%] lg:text-[32px]/[122%] text-[#091129] font-actay uppercase text-center">{t("title")}</h2>
