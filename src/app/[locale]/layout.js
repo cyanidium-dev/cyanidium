@@ -22,9 +22,7 @@ const montserrat = Montserrat({
 export async function generateMetadata({ params }) {
   const { locale } = params; 
   const messages = await getMessages({ locale, path: "messages" });
-  const meta = messages.meta;
-
-  console.log(meta); // Log the meta data
+  const meta = messages.meta; 
 
   return {
     title: meta.title,
