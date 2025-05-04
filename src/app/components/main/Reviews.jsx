@@ -36,7 +36,7 @@ export default function Reviews() {
         taskHeader: t("card_1.task_header"),
         task: t("card_1.task"),
         description: t("card_1.description"),
-        img: '/image/ava-1.jpg'
+        img: '/image/ava-1.webp'
       }, 
       {
         name: t("card_2.name"),
@@ -51,7 +51,7 @@ export default function Reviews() {
         taskHeader: t("card_3.task_header"),
         task: t("card_3.task"),
         description: t("card_3.description"),
-        img: '/image/ava-2.jpg'
+        img: '/image/ava-2.webp'
       }, 
       {
         name: t("card_4.name"),
@@ -66,7 +66,7 @@ export default function Reviews() {
         taskHeader: t("card_5.task_header"),
         task: t("card_5.task"),
         description: t("card_5.description"),
-        img: '/image/ava-3.png'
+        img: '/image/ava-3.webp'
       }, 
       {
         name: t("card_6.name"),
