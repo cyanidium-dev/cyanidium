@@ -1,14 +1,16 @@
 "use client";
 
-import ContactModal from "../modals/ContactModal";
+import dynamic from 'next/dynamic';
+const ContactModal = dynamic(() => import("../modals/ContactModal"), {
+  ssr: false,
+});
 import Container from "@/utils/Container";
-import { Button, useDisclosure } from "@heroui/react"
-import Laptop from './common/Laptop';
+import { useDisclosure } from "@heroui/react"
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
 
 import Image from "next/image"; 
-import SelectLang from "../main/common/SelectLang";
+const SelectLang = dynamic(() => import('../main/common/SelectLang'), { ssr: false });
 import StarIcon from "../main/common/StarIcon";
 
 export default function Hero() {
@@ -19,8 +21,10 @@ export default function Hero() {
     <div className="relative overflow-hidden">
       <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-[1280px] z-0">
         <div className="relative w-full">
-          <img
-            className="absolute h-[426.5px] w-[800px] z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px]"
+          <Image
+            className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px]"
+            width={855}
+            height={426.5}
             src="/image/laptop.gif"
             alt="Laptop Gif"
           />
