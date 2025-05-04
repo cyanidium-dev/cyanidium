@@ -31,6 +31,7 @@ const VideoPlayer = ({videoUrl}) => {
           height: '100%',
         }}
         title="Відгук Алеко"
+        loading='lazy'
       ></iframe>
     </div>
   );
