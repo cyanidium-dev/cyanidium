@@ -34,7 +34,7 @@ export default function Team() {
       <div className="relative overflow-hidden">
         <div className="hidden sm:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full z-0">
           <Image
-            src="/image/teambg.png"
+            src="/image/teambg1.png"
             alt="Phone"
             fill
             className=""

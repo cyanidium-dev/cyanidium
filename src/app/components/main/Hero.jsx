@@ -28,7 +28,7 @@ export default function Hero() {
             className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px]"
             width={855}
             height={426.5}
-            src="/image/laptop.gif"
+            src="/image/laptop2.gif"
             alt="Laptop Gif"
           />
         </div>
