@@ -33,7 +33,7 @@ export default function Features() {
 
   return (
     <div className="relative flex items-start justify-start">
-      <div className="hidden md:block absolute h-[1600px] w-full top-[30%] -translate-y-1/2">
+      <div className="hidden md:block absolute h-[1200px] w-full top-[30%] -translate-y-1/2">
         <Image
           src="/image/featuresbg.png"
           alt="Gradient"
