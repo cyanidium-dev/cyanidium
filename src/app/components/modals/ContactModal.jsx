@@ -75,7 +75,7 @@ export default function ContactModal({ isOpen, onClose }) {
 
   return (
     <>
-      <Modal className="mx-[25px] py-[48px] px-[18px] md:py-[57px] md:px-[43px] lg:py-[65px] lg:px-[68px] rounded-lg bg-[url(/image/contact-form-bg1.svg)]" isOpen={isOpen} onClose={onClose} placement="center" size="lg" hideCloseButton={true}>
+      <Modal className="mx-[25px] py-[48px] px-[18px] md:py-[57px] md:px-[43px] lg:py-[65px] lg:px-[68px] rounded-lg bg-[url(/image/contact-form-bg.svg)]" isOpen={isOpen} onClose={onClose} placement="center" size="lg" hideCloseButton={true}>
         <ModalContent>
           <ModalHeader className="flex flex-col gap-[18px] mb-8 md:mb-9 lg:mb-10">
             <h2 className="text-[24px]/[122%] md:text-[28px]/[122%] lg:text-[32px]/[122%] text-[#091129] font-actay uppercase text-center">{t("title")}</h2>
@@ -89,7 +89,7 @@ export default function ContactModal({ isOpen, onClose }) {
               placeholder={t("placeholder_2")}
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
-              className="text-sm text-[#091129] px-[24px] py-[13px] rounded-3xl border-[#091129] border-[2px] bg-transparent placeholder-[#091129]"
+              className="text-[12px]/[20px] md:text-[13px]/[20px] lg:text-sm text-[#091129] px-[24px] py-[13px] rounded-3xl border-[#091129] border-[2px] bg-transparent placeholder-[#091129]"
             />
             {/* {status && <p className="text-red-500 text-sm mt-2">{status}</p>} */}
           </ModalBody>

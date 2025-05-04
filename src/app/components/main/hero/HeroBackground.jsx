@@ -11,13 +11,15 @@ export default function HeroBackground() {
             height={426.5}
             src="/image/laptop2.gif"
             alt="Laptop Gif"
+            loading="lazy"
           />
         </div>
         <Image
-          src="/image/herobg-2.png"
+          src="/image/herobg1.png"
           alt="Hero Background Desktop"
           fill
           className="object-cover"
+          loading="lazy"
         />
       </div>
 
@@ -27,6 +29,7 @@ export default function HeroBackground() {
           alt="Hero Background Mobile"
           fill
           className="object-cover"
+          loading="lazy"
         />
       </div>
 
