@@ -20,8 +20,11 @@ const montserrat = Montserrat({
 });
 
 export async function generateMetadata({ params }) {
-  const messages = await getMessages({ locale: params.locale, path: "messages" });
+  const { locale } = params; 
+  const messages = await getMessages({ locale, path: "messages" });
   const meta = messages.meta;
+
+  console.log(meta); // Log the meta data
 
   return {
     title: meta.title,
@@ -34,7 +37,7 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function RootLayout({ children, params }) {
-  const { locale } = params;
+  const { locale } = params; 
   const messages = await getMessages({ locale, path: "messages" });
 
   return (

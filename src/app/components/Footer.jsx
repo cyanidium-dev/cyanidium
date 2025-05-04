@@ -59,7 +59,7 @@ export default function Footer() {
         <div className="flex flex-col xl:flex-row gap-10 justify-between px-[20px] md:px-[120px] pb-[70px]">
           <div className="flex flex-col items-start self-stretch">
             <h2 className="text-[24px] md:text-[32px] font-normal leading-[103.301%] uppercase text-white font-actay pb-[16px]">Code-art.dev</h2>
-            <span className="text-white/80 pb-[36px] leading-relaxed text-[12px] md:text-[16px]">
+            <span className="font-raleway text-white/80 pb-[36px] leading-relaxed text-[12px] md:text-[13px]/[18px] lg:text-[14px]/[18px]">
               {t("Contact").split("\n").map((line, i) => (
                 <span key={i}>
                   {line}
@@ -67,18 +67,20 @@ export default function Footer() {
                 </span>
               ))}
             </span>
-            <div className="flex w-[310px] md:w-[325px] h-[40px] rounded-[4px] border border-[radial-gradient(circle,_#EBF0FF,_#4D62CA,_#1A1033)] bg-transparent">
-              <input
-                ref={inputRef}
-                type="text"
-                placeholder={t("Phone")}
-                value={phone}
-                onChange={(e) => setPhone(e.target.value)}
-                className="px-[16px] py-2 w-full text-[#6B6E9A] font-raleway text-[12px] font-normal leading-[20px] bg-transparent"
-              />
-              <button onClick={handleSend} className="flex text-[14px] w-[88px] h-full justify-center items-center gap-[10px] shrink-0 rounded-[2px] bg-[linear-gradient(111deg,_#EAEBFF_37.36%,_#6A8FFF_182.03%)]">
-                {t("Send")}
-              </button>
+            <div className="p-[1px] rounded-[5px] bg-[linear-gradient(190deg,_rgba(235,_240,_255,_1)_12%,_rgba(77,_98,_202,_1)_77%,_rgba(26,_16,_51,_1)_100%)]">
+              <div className="flex w-[310px] md:w-[325px] h-[40px] rounded-[4px] bg-[#080218]">
+                <input
+                  ref={inputRef}
+                  type="text"
+                  placeholder={t("Phone")}
+                  value={phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                  className="px-[16px] py-2 w-full text-[#6B6E9A] font-raleway text-[12px] font-normal leading-[20px] bg-transparent placeholder-[#6B6E9A]"
+                />
+                <button onClick={handleSend} className="font-raleway flex text-[14px] w-[88px] h-full justify-center items-center gap-[10px] shrink-0 rounded-[2px] bg-[linear-gradient(111deg,_#EAEBFF_37.36%,_#6A8FFF_182.03%)]">
+                  <span className="bg-[linear-gradient(to_right,_#080218_50%,_#2462FF_100%)] inline-block text-transparent bg-clip-text">{t("Send")}</span>
+                </button>
+              </div>
             </div>
           </div>
 
