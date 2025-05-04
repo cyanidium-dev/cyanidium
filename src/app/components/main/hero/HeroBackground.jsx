@@ -31,7 +31,7 @@ export default function HeroBackground() {
             height={426.5}
             src="/image/laptop2.gif"
             alt="Laptop Gif"
-            loading="lazy"
+            priority
           />
         </div>
         <Image
