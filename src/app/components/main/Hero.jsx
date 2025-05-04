@@ -49,15 +49,12 @@ export default function Hero() {
             </div>
 
             {/* Средняя секция */}
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              viewport={{ once: true }}
+            <div
+
               className="flex justify-end pt-[180px] lg:pt-0"
             >
               <HeroPoints />
-            </motion.div>
+            </div>
             <div className="flex lg:hidden justify-center pt-7">
               <button onClick={onOpen} className="relative w-[310px] h-[48px] rounded-full border border-[#0F41FD] bg-[#EAEBFF] overflow-hidden">
                 <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-full z-0">
