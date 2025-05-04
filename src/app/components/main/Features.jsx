@@ -32,9 +32,15 @@ export default function Features() {
   ];
 
   return (
-    <div className="relative overflow-hidden flex items-start justify-start">
-      <div className="hidden lg:block absolute lg:top-[5%] xl:top-[10%] lg:-right-[25%] xl:-right-[15%] w-[500px] h-[500px] bg-[#DBE3FF] opacity-15 blur-[280px] rounded-full z-0"></div>
-      <div className="hidden lg:block absolute lg:top-[5%] xl:top-[10%] lg:-left-[25%] xl:-left-[15%] w-[500px] h-[500px] bg-[#DBE3FF] opacity-15 blur-[280px] rounded-full z-0"></div>
+    <div className="relative flex items-start justify-start">
+      <div className="hidden md:block absolute h-[1600px] w-full top-[30%] -translate-y-1/2">
+        <Image
+          src="/image/featuresbg.png"
+          alt="Gradient"
+          fill
+          className=""
+        />
+      </div>
       <Container>
         <div className="min-h-[2500px] lg:min-h-[1000px] flex flex-col justify-start">
           <h1 className="pb-[90px] text-center font-actay text-[32px] lg:text-[44px] xl:text-[64px] font-bold uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent">
@@ -62,24 +68,24 @@ export default function Features() {
                       src={feature.img}
                       alt={feature.name}
                       width={500}
-                      height={500} // можешь подогнать под нужный размер
+                      height={500}
                       className="w-full object-cover"
                     />
                     <div className="pl-7 pr-7 pt-8">
-                      <h2 className="whitespace-pre-wrap pb-4 text-[#EAEBFF] font-actay text-center md:text-left text-[14px] md:text-[16px] font-bold uppercase">
+                      <h2 className="whitespace-pre-wrap pb-4 text-[#EAEBFF] font-actay text-center lg:text-left text-[14px] md:text-[16px] font-bold uppercase">
                           {feature.name.split(" ").map((letter, i) => (
                             <motion.span
                               key={i}
                               initial={{ opacity: 0 }}
                               animate={{ opacity: 1 }}
                               transition={{ delay: 0.2 + i * 0.2 }} 
-                              className="inline-block mr-1" // ОБЯЗАТЕЛЬНО чтобы сохранять расстояния между словами
+                              className="inline-block mr-1"
                             >
                             {letter}
                           </motion.span>
                           ))}
                         </h2>
-                      <p className="text-[#EAEBFF] font-raleway text-center md:text-left text-[12px] md:text-[14px] font-light">
+                      <p className="text-[#EAEBFF] font-raleway text-center lg:text-left text-[12px] md:text-[14px] font-light">
                         {feature.description}
                       </p>
                     </div>

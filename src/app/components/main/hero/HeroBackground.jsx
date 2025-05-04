@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function HeroBackground() {
   return (
     <>
-      <div className="hidden md:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full w-[1280px] z-0">
+      <div className="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 h-full lg:w-full z-0">
         <div className="relative w-full">
           <Image
-            className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px]"
+            className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px] lg:w-[855px] xl:w-[825px]"
             width={855}
             height={426.5}
             src="/image/laptop2.gif"
@@ -15,7 +15,7 @@ export default function HeroBackground() {
           />
         </div>
         <Image
-          src="/image/herobg1.png"
+          src="/image/herobg-2.png"
           alt="Hero Background Desktop"
           fill
           className="object-cover"
@@ -23,7 +23,17 @@ export default function HeroBackground() {
         />
       </div>
 
-      <div className="block md:hidden absolute left-1/2 transform -translate-x-1/2 h-full w-full z-0">
+      <div className="block lg:hidden absolute left-1/2 transform -translate-x-1/2 h-full w-full z-0">
+        <div className="relative w-full top-[17.5%] sm:top-[8.5%] md:top-[10%]">
+          <Image
+            className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[0px] w-[350px] sm:w-[500px] md:w-[640px]"
+            width={855}
+            height={426.5}
+            src="/image/laptop2.gif"
+            alt="Laptop Gif"
+            loading="lazy"
+          />
+        </div>
         <Image
           src="/image/herobg-mobile.png"
           alt="Hero Background Mobile"

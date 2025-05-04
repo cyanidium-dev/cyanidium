@@ -9,7 +9,7 @@ export default function HeroLeft({ onOpen }) {
       <h1 className="text-[#EAEBFF] font-bold text-[32px] md:text-[44px] lg:text-[64px] uppercase mb-2 font-actay">
         {t("title")}
       </h1>
-      <p className="text-[#EAEBFF] text-[14px] md:text-[16px] text-center lg:text-left lg:text-[20px] mb-[38px] font-raleway">
+      <p className="text-[#EAEBFF] text-[14px] md:text-[16px] text-center lg:text-left lg:text-[20px] mb-[38px] sm:mb-[90px] md:mb-[210px] lg:mb-[38px] font-raleway">
         {t("question").split("\n").map((line, i) => (
           <span key={i}>
             {line}
