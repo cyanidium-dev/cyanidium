@@ -15,7 +15,7 @@ export default function HeroMobileButton({ onOpen, label }) {
             alt="Hero Background Mobile"
             fill
             className="object-cover"
-            loading="lazy"
+            priority
           />
         </div>
         <div className="text-[#020418] text-[14px] font-bold uppercase font-raleway">
