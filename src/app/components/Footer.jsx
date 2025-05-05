@@ -85,7 +85,7 @@ export default function Footer() {
                   onChange={(e) => setPhone(e.target.value)}
                   className="px-[16px] py-2 w-full text-[#6B6E9A] font-raleway text-[12px] font-normal leading-[20px] bg-transparent placeholder-[#6B6E9A]"
                 />
-                <button onClick={handleSend} className="font-raleway flex text-[14px] w-[88px] h-full justify-center items-center gap-[10px] shrink-0 rounded-[2px] bg-[linear-gradient(111deg,_#EAEBFF_37.36%,_#6A8FFF_182.03%)]">
+                <button onClick={handleSend} className="font-raleway flex text-[14px] w-[88px] h-full justify-center items-center gap-[10px] shrink-0 rounded-[2px] bg-[linear-gradient(111deg,_#EAEBFF_37.36%,_#6A8FFF_182.03%)] hover:bg-[linear-gradient(111deg,_#cdd6ff_37.36%,_#4c75ff_182.03%)] transition-colors duration-200">
                   <span className="bg-[linear-gradient(to_right,_#080218_50%,_#2462FF_100%)] inline-block text-transparent bg-clip-text">{t("Send")}</span>
                 </button>
               </div>
