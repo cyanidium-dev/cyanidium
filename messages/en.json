@@ -9,7 +9,8 @@
     "description": "Fill in your details and we will contact you to discuss your issue!",
     "placeholder_1": "Name",
     "placeholder_2": "Phone number",
-    "button": "Send"
+    "button": "Send",
+    "Error": "Incorrect phone number format"
   },
   "SuccessModal": {
     "title": "Thank you for leaving your contact!",
@@ -168,6 +169,7 @@
     "Phone": "Phone number",
     "Send": "Send",
     "Contacts": "Contacts",
-    "Media": "Media"
+    "Media": "Media",
+    "Error": "Incorrect phone number format"
   }
 }
