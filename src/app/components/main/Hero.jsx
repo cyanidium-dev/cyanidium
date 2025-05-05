@@ -23,7 +23,7 @@ export default function Hero() {
 
       <ContactModal isOpen={isOpen} onClose={onClose} />
       <Container>
-        <div className="relative min-h-[900px] sm:min-h-[1000px] md:min-h-[1330px] xl:min-h-[1200px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-[50]">
+        <div className="relative min-h-[900px] sm:min-h-[1000px] md:min-h-[1330px] xl:min-h-[1300px] pt-[20px] md:pt-[40px] lg:pt-[65px] px-[20px] sm:px-[60px] md:px-[80px] lg:px-[140px] z-[50]">
             <div className="flex flex-col lg:flex-row justify-between gap-6 lg:gap-0">
               {/* Левая часть */}
               <motion.div 
