@@ -4,7 +4,7 @@ export default function HeroBackground() {
   return (
     <>
       {/* Desktop */}
-      <div className="hidden xl:block absolute left-1/2 transform -translate-x-1/2 h-[1000px] lg:w-[1920px] z-0">
+      <div className="hidden xl:block absolute left-1/2 transform -translate-x-1/2 h-[1283px] lg:w-[1920px] z-0">
         <div className="relative w-full">
           <Image
             className="absolute z-[30] left-1/2 top-1/2 translate-y-1/2 -translate-x-1/2 pr-[140px] xl:w-[930px]"
