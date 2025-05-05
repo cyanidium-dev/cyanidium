@@ -15,23 +15,31 @@ export default function Footer() {
   const [phone, setPhone] = useState("");
   const inputRef = useRef(null);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [isError, setIsError] = useState(false);
 
   const handleSend = async () => {
-    if (!phone.trim()) return;
+    const trimmedPhone = phone.trim();
+    if (!trimmedPhone || trimmedPhone.length !== 17) {
+      setIsError(true);
+      return;
+    }
+
+    setIsError(false);
   
     try {
       const res = await fetch("https://cyanidiumbot-production.up.railway.app/send", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: "", // имя может быть пустым
+          name: "", 
           phone: phone,
-          source: "Footer", // идентификатор источника
+          source: "Footer", 
         }),
       });
 
       if (res.ok) {
-        setPhone(""); // Очищаем поле ввода после успешной отправки
+        setPhone(""); 
+        setIsError(false);
         onOpen();
       }
     } catch (err) {
@@ -46,7 +54,7 @@ export default function Footer() {
       };
       const mask = IMask(inputRef.current, maskOptions);
       mask.on("accept", () => {
-        setPhone(mask.value); // Обновляем состояние при изменении маски
+        setPhone(mask.value); 
       });
     }
   }, []);
@@ -58,7 +66,7 @@ export default function Footer() {
         {/* Левая часть */}
         <div className="flex flex-col xl:flex-row gap-10 justify-between px-[20px] md:px-[120px] pb-[70px]">
           <div className="flex flex-col items-start self-stretch">
-            <h2 className="text-[24px] md:text-[32px] font-normal leading-[103.301%] uppercase text-white font-actay pb-[16px]">Code-art.dev</h2>
+            <h2 className="text-[24px] md:text-[32px] font-normal leading-[103.301%] uppercase text-white font-actay pb-[16px]">code-site.art</h2>
             <span className="font-raleway text-white/80 pb-[36px] leading-relaxed text-[12px] md:text-[13px]/[18px] lg:text-[14px]/[18px]">
               {t("Contact").split("\n").map((line, i) => (
                 <span key={i}>
@@ -82,6 +90,9 @@ export default function Footer() {
                 </button>
               </div>
             </div>
+            {isError && (
+              <p className="text-red-500 text-[12px] mt-2">{t("Error")}</p>
+            )}
           </div>
 
           {/* Навигация и соцсети */}
@@ -89,8 +100,12 @@ export default function Footer() {
             <div className="flex flex-col gap-4">
               <h3 className="text-white font-actay text-[16px] font-bold leading-[103.301%] uppercase">{t("Contacts")}</h3>
               <div className="flex flex-col gap-3 md:gap-3 uppercase font-semibold items-start">
-                  <span className="text-white text-center font-montserrat text-[14px] font-normal leading-[18px] uppercase">+380-97-006-87-07</span>
-                  <span className="text-white text-center font-raleway text-[14px] font-light leading-[18px] uppercase">cyanidiumdev@gmail.com</span>
+                <a href="tel:+380970068707" className="text-white text-center font-montserrat text-[14px] font-normal leading-[18px] uppercase hover:text-sky-600 transition-colors duration-200">
+                  +380-97-006-87-07
+                </a>
+                <a href="mailto:cyanidiumdev@gmail.com" className="text-white text-center font-raleway text-[14px] font-light leading-[18px] uppercase hover:text-sky-600 transition-colors duration-200">
+                  cyanidiumdev@gmail.com
+                </a>
               </div>
             </div>
             <div className="flex flex-col gap-4">
@@ -116,7 +131,7 @@ export default function Footer() {
         <div className="animate-marquee flex w-max">
           {[...Array(2)].map((_, idx) => (
             <div key={idx} className="flex">
-              {Array(10).fill("Code-art.dev").map((text, i) => (
+              {Array(10).fill("code-site.art").map((text, i) => (
                 <span
                   key={`${idx}-${i}`}
                   className="font-actay text-[50px] lg:text-[100px] xl:text-[150px] font-bold uppercase bg-[linear-gradient(175deg,_#EAEBFF_3.91%,_#6A8FFF_123.62%)] bg-clip-text text-transparent mr-[100px]"

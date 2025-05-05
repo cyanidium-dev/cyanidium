@@ -22,6 +22,7 @@ export default function ContactModal({ isOpen, onClose }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [status, setStatus] = useState("");
   const phoneRef = useRef(null);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     if (!isOpen || !phoneRef.current) return;
@@ -39,10 +40,13 @@ export default function ContactModal({ isOpen, onClose }) {
   
 
   const handleSendMessage = async () => {
-    if (!phone.trim()) {
-      setStatus("Введите номер телефона!");
+    const trimmedPhone = phone.trim();
+    if (!trimmedPhone || trimmedPhone.length !== 17) {
+      setIsError(true);
       return;
     }
+
+    setIsError(false);
   
     try {
       const response = await fetch("https://cyanidiumbot-production.up.railway.app/send", {
@@ -61,6 +65,7 @@ export default function ContactModal({ isOpen, onClose }) {
         throw new Error("Ошибка сервера");
       }
   
+      setIsError(false);
       setIsModalOpen(true);
       onClose();
       setName("");
@@ -91,6 +96,9 @@ export default function ContactModal({ isOpen, onClose }) {
               onChange={(e) => setPhone(e.target.value)}
               className="text-[12px]/[20px] md:text-[13px]/[20px] lg:text-sm text-[#091129] px-[24px] py-[13px] rounded-3xl border-[#091129] border-[2px] bg-transparent placeholder-[#091129]"
             />
+            {isError && (
+              <p className="text-red-500 text-[12px] ml-6">{t("Error")}</p>
+            )}
             {/* {status && <p className="text-red-500 text-sm mt-2">{status}</p>} */}
           </ModalBody>
           <ModalFooter className="px-0">
