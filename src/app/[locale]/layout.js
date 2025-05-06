@@ -29,7 +29,7 @@ export async function generateMetadata({ params }) {
     description: meta.description,
     keywords: meta.keywords,
     icons: {
-      icon: "/icons/favicon.ico",
+      icon: { url: "/icons/favicon.ico", locale: false },
     },
   };
 }
